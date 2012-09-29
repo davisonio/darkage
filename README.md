@@ -83,16 +83,16 @@ How to use the mod:
        [Desert Stone] --> I think I will change it in the future
                           release with its own Cobbles.
     
-   Sandstone Cobble: brick version of the Sandstone, good for
+    Sandstone Cobble: brick version of the Sandstone, good for
        buildings with a pale color.
        COOKING
        [Sandstone]
-
-   Schist: medium grade metamorphic rock from Slate.
+    
+    Schist: medium grade metamorphic rock from Slate.
        COOKING
        [Slate]
-   
-   Silt: granular material of a size somewhere between sand and clay.
+    
+    Silt: granular material of a size somewhere between sand and clay.
        It brokes in 4 Silt Lumps.
        CRAFT -> 3
        [Sand] [Sand]
@@ -101,13 +101,13 @@ How to use the mod:
        [Silt Lump] [Silt Lump]
        [Silt Lump] [Silt Lump]
        
-   Slate: fine-grained, foliated, homogeneous metamorphic rock 
+    Slate: fine-grained, foliated, homogeneous metamorphic rock 
        derived from an original shale-type sedimentary rock through
        low-grade regional metamorphism. It is used to build roof.
        COOKING
        [Shale]
 
-   Desert Stone: just the default block, it can be obtained now
+    Desert Stone: just the default block, it can be obtained now
        from Desert Sand. The idea is that Desert Sand is stonner
        than regular Sand, so it takes less to create a Desert
        Stone than a Sandstone.
