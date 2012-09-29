@@ -48,7 +48,26 @@ How to use the mod:
        [Dirt] [Dirt]
        [Gravel] [Gravel]
 
-    Old Red Sandstone: A light red sandstone, in fact it's 
+    Gneiss: high grade metamorphic rock formed from Schist, very 
+       common, and used in construction. It sometimes brokes in 
+       Gneiss Cobble when being digged.
+       COOKING
+       [Schist]
+
+    Gneiss Cobble: brick version of the gneiss.
+       From dig gneiss
+       
+    Mud: mixture of water and some combination of soil, silt, and
+       clay. Used for build houses, specially in desertic regions.
+       It brokes in 4 Mud Lumps when digged.
+       CRAFT -> 3
+       [Dirt] [Dirt]
+  	   [Clay Lump] [Silt Lump]
+       CRAFT -> 1
+       [Mud Lump] [Mud Lump]
+       [Mud Lump] [Mud Lump]
+
+    Old Red Sandstone: a light red sandstone, in fact it's 
        sandstone with iron that gives it this color.
        CRAFT -> 4
        [Sandstone] [Sandstone]
@@ -68,6 +87,25 @@ How to use the mod:
        buildings with a pale color.
        COOKING
        [Sandstone]
+
+   Schist: medium grade metamorphic rock from Slate.
+       COOKING
+       [Slate]
+   
+   Silt: granular material of a size somewhere between sand and clay.
+       It brokes in 4 Silt Lumps.
+       CRAFT -> 3
+       [Sand] [Sand]
+       [Clay Lump] [Clay Lump]
+       CRAFT -> 1
+       [Silt Lump] [Silt Lump]
+       [Silt Lump] [Silt Lump]
+       
+   Slate: fine-grained, foliated, homogeneous metamorphic rock 
+       derived from an original shale-type sedimentary rock through
+       low-grade regional metamorphism. It is used to build roof.
+       COOKING
+       [Shale]
 
    Desert Stone: just the default block, it can be obtained now
        from Desert Sand. The idea is that Desert Sand is stonner
