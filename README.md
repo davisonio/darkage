@@ -63,9 +63,6 @@ Tunning:
     Only pure stones will be provided.
 
 
-How to use the mod:
-  More blocks from the default ones, plus new layers of stones.
-
   BUILDING NODES
 
   Adobe: Sand and Clay mixture with Straw to build houses or walls
@@ -195,6 +192,7 @@ How to use the mod:
   Slate Tale: Nice blue slate tales for roofs. They has been used
      as building traditional building material in zones where
      slate is easy to find.
+     Note: It has stairs and slabs.
      CRAFT -> 2
      [Slate Cobble] [Slate Cobble]
      [Slate Cobble] [Slate Cobble]
