@@ -112,3 +112,9 @@ darkage.register_stairs("darkage","slate_tale",
 	{"darkage_slate_tale.png"},
 	"Slate Tale"
 )
+
+darkage.register_stairs("darkage","straw",
+	 {snappy=3, flammable=2},
+	{"darkage_straw.png"},
+	"Straw"
+)

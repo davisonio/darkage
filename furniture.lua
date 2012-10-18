@@ -205,7 +205,7 @@ minetest.register_craft({
 	output = 'darkage:wooden_frame',
 	recipe = {
     {'default:stick','default:stick','default:stick'},
-    {'default:stick','darkage:glass','default:stick'},
+    {'default:stick','default:glass','default:stick'},
     {'default:stick','default:stick','default:stick'},
 	}
 })
