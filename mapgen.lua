@@ -13,7 +13,7 @@ local function generate_stratus(name, wherein, ceilin, ceil, minp, maxp, seed, s
   end
   -- it will be only generate a stratus for every 100 m of area
   local stratus_per_volume=1
-  local area=45
+  local area=40
   local y_min = math.max(minp.y, height_min)
   local y_max = math.min(maxp.y, height_max)
   local volume = ((maxp.x-minp.x+1)/area)*((y_max-y_min+1)/area)*((maxp.z-minp.z+1)/area)
@@ -95,6 +95,7 @@ local function generate_stratus(name, wherein, ceilin, ceil, minp, maxp, seed, s
               local z2 = z0+z1
               local p2 = {x=x2, y=y2, z=z2}
               n = minetest.env:get_node(p2).name
+              x = 0
               for k, v in ipairs(wherein) do
                 if n == v then
                   x = 1
