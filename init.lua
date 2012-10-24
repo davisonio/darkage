@@ -1,5 +1,7 @@
 print (" ---- Dark Age is Loading! ---- ")
+-- Commend this lines if you don't like some of this features
 dofile(minetest.get_modpath("darkage").."/mapgen.lua")
+dofile(minetest.get_modpath("darkage").."/building.lua")
 dofile(minetest.get_modpath("darkage").."/furniture.lua")
 dofile(minetest.get_modpath("darkage").."/stairs.lua")
 
@@ -115,6 +117,15 @@ minetest.register_node("darkage:gneiss_cobble", {
 	sounds = default.node_sound_stone_defaults()
 })
 
+minetest.register_node("darkage:marble", {
+  description = "Marble",
+	tiles = {"darkage_marble.png"},
+	is_ground_content = true,
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+
 minetest.register_node("darkage:mud", {
   description = "Mud",
 	tiles = {"darkage_mud_up.png","darkage_mud.png"},
@@ -143,11 +154,20 @@ minetest.register_node("darkage:ors_cobble", {
 	sounds = default.node_sound_stone_defaults()
 })
 
+
 minetest.register_node("darkage:sandstone_cobble", {
   description = "Sandstone Cobble",
 	tiles = {"darkage_sandstone_cobble.png"},
 	is_ground_content = true,
 	groups = {crumbly=2,cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:serpentine", {
+  description = "Serpentine",
+	tiles = {"darkage_serpentine.png"},
+	is_ground_content = true,
+	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults()
 })
 
@@ -211,6 +231,14 @@ minetest.register_node("darkage:straw", {
 	sounds = default.node_sound_leaves_defaults(),
 })
 
+minetest.register_node("darkage:stone_brick", {
+  description = "Stone Brick",
+	tiles = {"darkage_stone_brick.png"},
+	is_ground_content = true,
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
 minetest.register_node("darkage:straw_bale", {
   description = "Straw Bale",
 	tiles = {"darkage_straw_bale.png"},
@@ -220,6 +248,21 @@ minetest.register_node("darkage:straw_bale", {
 	sounds = default.node_sound_leaves_defaults(),
 })
 
+minetest.register_node("darkage:marble", {
+  description = "Marble",
+	tiles = {"darkage_marble.png"},
+	is_ground_content = true,
+	groups = {cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:marble_tile", {
+  description = "Marble Tile",
+	tiles = {"darkage_marble_tile.png"},
+	is_ground_content = true,
+	groups = {cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
 
 ---------------
 -- Overrides
@@ -289,6 +332,14 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = 'darkage:cobble_with_plaster 2',
+	recipe = {
+    {'darkage:chalk_powder','default:cobble'},
+		{'darkage:chalk_powder','default:cobble'},
+	}
+})
+
+minetest.register_craft({
 	output = 'darkage:darkdirt 4',
 	recipe = {
     {'default:dirt','default:dirt'},
@@ -353,6 +404,14 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = 'darkage:stone_brick 3',
+	recipe = {
+    {'default:cobble','default:cobble'},
+		{'default:cobble','default:cobble'},
+	}
+})
+
+minetest.register_craft({
 	output = 'darkage:straw 2',
 	recipe = {
     {'default:dry_shrub','default:dry_shrub'},
@@ -362,7 +421,6 @@ minetest.register_craft({
 
 minetest.register_craft({
 	output = 'darkage:straw 2',
-
 	recipe = {
     {'darkage:dry_leaves','darkage:dry_leaves'},
 		{'darkage:dry_leaves','darkage:dry_leaves'},
@@ -376,6 +434,7 @@ minetest.register_craft({
     {'darkage:straw','darkage:straw'},
 	}
 })
+
 
 -- Cookings
 minetest.register_craft({
@@ -419,6 +478,7 @@ minetest.register_craft({
 	output = "darkage:ors",
 	recipe = "darkage:ors_cobble",
 })
+
 
 minetest.register_craft({
 	type = "cooking",

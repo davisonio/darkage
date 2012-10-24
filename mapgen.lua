@@ -13,7 +13,7 @@ local function generate_stratus(name, wherein, ceilin, ceil, minp, maxp, seed, s
   end
   -- it will be only generate a stratus for every 100 m of area
   local stratus_per_volume=1
-  local area=40
+  local area=45
   local y_min = math.max(minp.y, height_min)
   local y_max = math.min(maxp.y, height_max)
   local volume = ((maxp.x-minp.x+1)/area)*((y_max-y_min+1)/area)*((maxp.z-minp.z+1)/area)
@@ -214,34 +214,42 @@ minetest.register_on_generated(function(minp, maxp, seed)
   -- Generate stratus
   print("DARKAGE: Generate stratus");
   generate_ore("darkage:desert_stone_with_iron", "default:desert_stone", minp, maxp, seed+0, 1/7/7/7, 3, 5, -15, 40)
-  generate_claylike("darkage:mud", minp, maxp, seed+2, 2, 0, 2, 0)
-  generate_claylike("darkage:silt", minp, maxp, seed+1, 2, -1, 1, 1)
+  generate_claylike("darkage:mud", minp, maxp, seed+1, 4, 0, 2, 0)
+  generate_claylike("darkage:silt", minp, maxp, seed+2, 4, -1, 1, 1)
   generate_stratus("darkage:chalk", 
                    {"default:stone"},
                    {"default:stone","air"}, nil,
-                   minp, maxp, seed+4, 3, 25, 7, 0, -20,  50)
+                   minp, maxp, seed+3, 4, 25, 8, 0, -20,  50)
   generate_stratus("darkage:ors", 
                    {"default:stone"},
                    {"default:stone","air","default:water_source"}, nil,
-                   minp, maxp, seed+4, 5, 20, 7, 50, -200,  500)
+                   minp, maxp, seed+4, 4, 25, 7, 50, -200,  500)
   generate_stratus("darkage:shale", 
                    {"default:stone"}, 
                    {"default:stone","air"}, nil,
-                   minp, maxp, seed+5, 4, 16, 7, 50, -50,  20)
+                   minp, maxp, seed+5, 4, 23, 7, 50, -50,  20)
   generate_stratus("darkage:slate", 
                    {"default:stone"}, 
                    {"default:stone","air"}, nil,
-                   minp, maxp, seed+6, 6, 16, 5, 50, -500, 0)
+                   minp, maxp, seed+6, 6, 23, 5, 50, -500, 0)
   generate_stratus("darkage:schist", 
                    {"default:stone"}, 
                    {"default:stone","air"}, nil,
-                   minp, maxp, seed+7, 6, 14, 6, 50, -31000, -10)
+                   minp, maxp, seed+7, 6, 19, 6, 50, -31000, -10)
   generate_stratus("darkage:basalt", 
                    {"default:stone"}, 
                    {"default:stone","air"}, nil,
-                   minp, maxp, seed+8, 5, 14, 5, 20, -31000, -50)
+                   minp, maxp, seed+8, 5, 20, 5, 20, -31000, -50)
+  generate_stratus("darkage:marble", 
+                   {"default:stone"},
+                   {"default:stone","air"}, nil,
+                   minp, maxp, seed+9, 4, 25, 6, 50, -31000,  -75)
+  generate_stratus("darkage:serpentine", 
+                   {"default:stone"},
+                   {"default:stone","air"}, nil,
+                   minp, maxp, seed+10, 4, 28, 8, 50, -31000,  -350)
   generate_stratus("darkage:gneiss", 
                    {"default:stone"}, 
                    {"default:stone","air"}, nil,
-                   minp, maxp, seed+8, 10, 10, 5, 50, -31000, -100)
+                   minp, maxp, seed+11, 4, 15, 5, 50, -31000, -250)
 end)

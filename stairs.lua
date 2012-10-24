@@ -106,6 +106,11 @@ function darkage.register_stairs(modname, item, groups, images, description)
 	})
 end
 
+darkage.register_stairs("darkage","basalt_cobble",
+	{cracky=3},
+	{"darkage_basalt_cobble.png"},
+	"Basalt Cobble"
+)
 
 darkage.register_stairs("darkage","slate_tale",
 	{cracky=3},
@@ -118,3 +123,22 @@ darkage.register_stairs("darkage","straw",
 	{"darkage_straw.png"},
 	"Straw"
 )
+
+darkage.register_stairs("darkage","stone_brick",
+	{cracky=3},
+	{"darkage_stone_brick.png"},
+	"Stone Brick"
+)
+
+darkage.register_stairs("darkage","ors_cobble",
+	{cracky=3},
+	{"darkage_ors_cobble.png"},
+	"Old Red Sandtone"
+)
+
+darkage.register_stairs("darkage","desert_stone_cobble",
+	{cracky=3},
+	{"darkage_desert_stone_cobble.png"},
+	"Desert Stone Cobble"
+)
+

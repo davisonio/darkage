@@ -79,7 +79,7 @@ Tunning:
   Basalt Cobble: A darken version of the default Cobble
      CRAFT -> 4
      [Cobble] [Cobble]
-     [Coal Lumb] [Coal Lumb]
+     [Coal Lump] [Coal Lump]
 
   Chalk: a soft, white and porous sedimentary rock. It becomes
      Chalk Powder when digged. Can't be craft, only found as
@@ -97,7 +97,7 @@ Tunning:
 
   Dark Dirt: A darken version of the Dirt where the grass doesn't
      grown, perfect for create a path in a forest. I was using
-     Ggravel, but the noise walking was annoying to me (like
+     Gravel, but the noise walking was annoying to me (like
      walking over iron coal with the nude feet :P), for this I
      created this node.
      CRAFT -> 4
@@ -160,6 +160,12 @@ Tunning:
      [Desert Stone] --> I think I will change it in the future
                         release with its own Cobbles.
 
+  Reinforced Cobble: brick with crossed wooden.
+     CRAFT -> 1
+     [Stick] [] [Stick]
+     [] [Cobble] []
+     [Stick] [] [Stick]
+  
   Sandstone Cobble: brick version of the Sandstone, good for
      buildings with a pale color.
      COOKING
@@ -171,9 +177,6 @@ Tunning:
 
   Silt: granular material of a size somewhere between sand and clay.
      It brokes in 4 Silt Lumps.
-     CRAFT -> 3
-     [Sand] [Sand]
-     [Clay Lump] [Clay Lump]
      CRAFT -> 1
      [Silt Lump] [Silt Lump]
      [Silt Lump] [Silt Lump]
@@ -185,7 +188,9 @@ Tunning:
      [Shale]
      COOKING
      [Slate Cobble]
+
  
+
   Slate Cobble: Cobble obtained from Slate
      From dig Slate
 
@@ -286,4 +291,8 @@ http://minetest.net/
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
   0. You just DO WHAT THE FUCK YOU WANT TO. 
+
+
+
+
 

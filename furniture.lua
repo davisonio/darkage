@@ -57,6 +57,47 @@ minetest.register_node('darkage:box', {
 	end,
 })
 
+minetest.register_node('darkage:wood_shelves', {
+	description = "Wooden Shelves",
+	tiles = { 'darkage_shelves.png','darkage_shelves.png','darkage_shelves.png',
+            'darkage_shelves.png','darkage_shelves.png','darkage_shelves_front.png'},
+	sunlight_propagates = false,
+	paramtype = "light",
+	paramtype2 = "facedir",
+	walkable = true,
+	groups = { snappy = 3 },
+	sounds = default.node_sound_leaves_defaults(),
+	on_construct = function(pos)
+		local meta = minetest.env:get_meta(pos)
+		meta:set_string("formspec",
+				"size[8,10]"..
+        "list[context;up;0,0;8,3;]"..
+        "list[context;down;0,3;8,3;]"..
+				"list[current_player;main;0,6;8,4;]")
+		meta:set_string("infotext", "Wooden Shelves")
+		local inv = meta:get_inventory()
+		inv:set_size("up", 16)
+		inv:set_size("down", 16)
+	end,
+	can_dig = function(pos,player)
+		local meta = minetest.env:get_meta(pos);
+		local inv = meta:get_inventory()
+		return inv:is_empty("shape") and inv:is_empty("out") and inv:is_empty("water")
+	end,
+	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff in shelves at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_put = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" moves stuff to shelves at "..minetest.pos_to_string(pos))
+	end,
+    on_metadata_inventory_take = function(pos, listname, index, stack, player)
+		minetest.log("action", player:get_player_name()..
+				" takes stuff from shelves at "..minetest.pos_to_string(pos))
+	end,
+})
+
 --minetest.register_node("darkage:rosace", {
 --	description = "Rose Window",
 --	tiles = {"darkage_rosace.png"},
@@ -78,6 +119,18 @@ minetest.register_node("darkage:iron_bars", {
 	sounds = default.node_sound_stone_defaults()
 })
 
+minetest.register_node("darkage:lamp", {
+	description = "Lamp",
+	tiles = {
+		"darkage_lamp.png"
+	},
+	paramtype = "light",
+	sunlight_propagates = true,
+	light_source = LIGHT_MAX-1,
+	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3,flammable=1},
+	sounds = default.node_sound_glass_defaults(),
+})
+
 minetest.register_node("darkage:iron_grille", {
 	description = "Iron Grille",
   drawtype = "glasslike",
@@ -92,7 +145,7 @@ minetest.register_node("darkage:iron_grille", {
 })
 
 minetest.register_node("darkage:wood_bars", {
-	description = "Wood Bars",
+	description = "Wooden Bars",
   drawtype = "glasslike",
 	tiles = {"darkage_wood_bars.png"},
   inventory_image = "darkage_wood_bars.png",
@@ -118,7 +171,7 @@ minetest.register_node("darkage:wood_grille", {
 })
 
 minetest.register_node("darkage:wood_frame", {
-	description = "Wood Frame",
+	description = "Wooden Frame",
   drawtype = "glasslike",
 	tiles = {"darkage_wood_frame.png"},
   inventory_image = "darkage_wood_frame.png",
@@ -129,6 +182,7 @@ minetest.register_node("darkage:wood_frame", {
 	groups = {snappy=1,choppy=2},
 	sounds = default.node_sound_stone_defaults()
 })
+
 ---------------
 -- Crafts Item
 ---------------
@@ -174,14 +228,14 @@ minetest.register_craft({
 	}
 })
 
--- minetest.register_craft({
--- 	output = 'darkage:scroll 2',
--- 	recipe = {
---     {'default:paper','default:paper','default:paper'},
---     {'default:paper','',''},
---     {'default:paper','paper',''},
--- 	}
--- })
+minetest.register_craft({
+	output = 'darkage:lamp',
+	recipe = {
+    {'default:stick','','default:stick'},
+    {'','default:torch',''},
+    {'default:stick','','default:stick'},
+	}
+})
 
 minetest.register_craft({
 	output = 'darkage:wood_bars 2',
@@ -202,19 +256,28 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'darkage:wood_frame',
+	output = 'darkage:wood_shelves',
 	recipe = {
-    {'default:stick','default:stick','default:stick'},
-    {'default:stick','default:glass','default:stick'},
-    {'default:stick','default:stick','default:stick'},
+    {'darkage:box'},
+    {'darkage:box'},
 	}
 })
 
---minetest.register_craft({
---	output = 'darkage:rosace',
---	recipe = {
---    {'default:cobble','','default:cobble'},
---    {'','default:cobble',''},
---    {'default:cobble','','default:cobble'},
---	}
---})
+minetest.register_craft({
+	output = 'darkage:wood_frame',
+	recipe = {
+    {'default:stick','','default:stick'},
+    {'','default:glass',''},
+    {'default:stick','','default:stick'},
+	}
+})
+
+
+-- Cookings
+minetest.register_craft({
+	type = "cooking",
+	output = "default:glass",
+	recipe = "darkage:wood_frame",
+})
+
+
