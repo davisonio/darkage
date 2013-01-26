@@ -201,21 +201,21 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_craft({
-	output = 'darkage:chain 2',
-	recipe = {
-    {'default:steel_ingot'},
-    {'default:steel_ingot'},
-    {'default:steel_ingot'},
+minetest.register_craft({ 		
+	output = 'darkage:chain 2',	
+	recipe = {					
+    {'darkage:iron_stick'},		--changed reziep to avoid problems with ironbars - addi
+    {'darkage:iron_stick'},	
+    {'darkage:iron_stick'},	
 	}
 })
 
 minetest.register_craft({
 	output = 'darkage:iron_bars 2',
 	recipe = {
-    {'default:steel_ingot','','default:steel_ingot'},
-    {'default:steel_ingot','','default:steel_ingot'},
-    {'default:steel_ingot','','default:steel_ingot'},
+    {'darkage:iron_stick','','darkage:iron_stick'},	--changed reziep to avoid problems with 3dfurniture -addi
+    {'darkage:iron_stick','','darkage:iron_stick'},	
+    {'darkage:iron_stick','','darkage:iron_stick'},	
 	}
 })
 
