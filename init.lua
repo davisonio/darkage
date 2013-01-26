@@ -300,6 +300,12 @@ minetest.register_craftitem("darkage:silt_lump", {
 	inventory_image = "darkage_silt_lump.png",
 })
 
+minetest.register_craftitem("darkage:iron_stick", {
+	description = "Iron Stick",
+	inventory_image = "darkage_iron_stick.png",
+})
+
+
 ----------
 -- Crafts
 ----------
@@ -435,6 +441,12 @@ minetest.register_craft({
 	}
 })
 
+minetest.register_craft({
+	output = 'darkage:iron_stick 4',
+	recipe = {
+    {'default:steel_ingot'},
+	}
+})
 
 -- Cookings
 minetest.register_craft({
