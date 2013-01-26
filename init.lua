@@ -256,13 +256,13 @@ minetest.register_node("darkage:marble", {
 	sounds = default.node_sound_stone_defaults()
 })
 
-minetest.register_node("darkage:marble_tile", {
-  description = "Marble Tile",
-	tiles = {"darkage_marble_tile.png"},
-	is_ground_content = true,
-	groups = {cracky=2},
-	sounds = default.node_sound_stone_defaults()
-})
+--minetest.register_node("darkage:marble_tile", { --disabled because texture not found
+--  description = "Marble Tile",
+--	tiles = {"darkage_marble_tile.png"},
+--	is_ground_content = true,
+--	groups = {cracky=2},
+--	sounds = default.node_sound_stone_defaults()
+--})
 
 ---------------
 -- Overrides
