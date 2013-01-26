@@ -410,10 +410,11 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'darkage:stone_brick 3',
+	output = 'darkage:stone_brick 9',--changed bacause conflicts with moreblocks
 	recipe = {
-    {'default:cobble','default:cobble'},
-		{'default:cobble','default:cobble'},
+    {'default:cobble','default:cobble','default:cobble'},--changed bacause conflicts with moreblocks
+	{'default:cobble','default:cobble','default:cobble'},--changed bacause conflicts with moreblocks
+	{'default:cobble','default:cobble','default:cobble'},--changed bacause conflicts with moreblocks
 	}
 })
 
