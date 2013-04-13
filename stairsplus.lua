@@ -1,15 +1,16 @@
 darkage = {};
 function darkage.register_stairs(modname, subname, groups, images, desc)
+	table.insert(circular_saw.known_stairs, modname..":"..subname);
 	recipeitem = modname..":"..subname;
 	desc_stair = desc.." stair";
 	desc_slab = desc.." slab";
 	desc_panel = desc.." panel";
 	desc_micro = desc.." micro";
 	drop = subname
-	stairsplus.register_stair(modname, subname, recipeitem, groups, images, desc_stair, drop)
-	stairsplus.register_slab(modname, subname, recipeitem, groups, images, desc_slab, drop)
-	stairsplus.register_panel(modname, subname, recipeitem, groups, images, desc_panel, drop)
-	stairsplus.register_micro(modname, subname, recipeitem, groups, images, desc_micro, drop)
+	register_stair(modname, subname, recipeitem, groups, images, desc_stair, drop)
+	register_slab(modname, subname, recipeitem, groups, images, desc_slab, drop)
+	register_panel(modname, subname, recipeitem, groups, images, desc_panel, drop)
+	register_micro(modname, subname, recipeitem, groups, images, desc_micro, drop)
 end
 darkage.register_stairs("darkage","basalt_cobble",
 	{cracky=3},
