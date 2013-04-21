@@ -1,7 +1,9 @@
-=== DarkAge MOD for MINETEST-C55 ===
-by Master Gollum
+#DarkAge MOD for MINETEST
+orginal by Master Gollum 
+modyfied by addi
 
-Introduction:
+
+##Introduction:
   This mod adds a few new blocks that allows to create new buildings in a
   pre industrial landscape. Of course, feel free to use them in any other 
   construction :P
@@ -23,7 +25,7 @@ Introduction:
 
   
 
-Release Notes
+##Release Notes
 
   Version 0.3
     * 29 Nodes + 3 Craft Items
@@ -40,7 +42,7 @@ Release Notes
 PS: This document has been structured as the README.txt of PilzAdam in 
     his Bed MOD.
 
-How to install:
+###How to install:
   Unzip the archive an place it in minetest-base-directory/mods/minetest/
   if you have a windows client or a linux run-in-place client. If you 
   have a linux system-wide instalation place it in 
@@ -50,7 +52,7 @@ How to install:
   For further information or help see:
     http://wiki.minetest.com/wiki/Installing_Mods
 
-Tunning:
+###Tunning:
   Comments the following lines to remove what you don't like:
   (To comment them just add -- at the beginning of their lines)
 
@@ -63,9 +65,10 @@ Tunning:
     Only pure stones will be provided.
 
 
-  BUILDING NODES
+##BUILDING NODES
 
   Adobe: Sand and Clay mixture with Straw to build houses or walls
+  
          Used from historical times, one of the first bricks 
          invented. I have to improve this texture, it is ugly :P
      CRAFT -> 4
@@ -73,22 +76,27 @@ Tunning:
      [Clay Lumb] [Straw]
 
   Basalt: a darken version of the default Stone
+  
      COOKING
      [Basalt Cobble]
 
   Basalt Cobble: A darken version of the default Cobble
+  
      CRAFT -> 4
      [Cobble] [Cobble]
      [Coal Lump] [Coal Lump]
 
   Chalk: a soft, white and porous sedimentary rock. It becomes
+  
      Chalk Powder when digged. Can't be craft, only found as
      stratum.
 
   Chalk Powder: pile of chalk from digging Chalk stones. Can
+  
      be used to prepare plaster. See Cobblestone with Plaster.
 
   Cobblestone with Plaster: Cobbles where has been applied a
+  
      layer of white plaster.
      When digged it lost the plaster layer!
      CRAFT -> 2
@@ -96,6 +104,7 @@ Tunning:
      [Cobblestone] [Chalk Powder]
 
   Dark Dirt: A darken version of the Dirt where the grass doesn't
+  
      grown, perfect for create a path in a forest. I was using
      Gravel, but the noise walking was annoying to me (like
      walking over iron coal with the nude feet :P), for this I
@@ -105,12 +114,14 @@ Tunning:
      [Gravel] [Gravel]
 
   Desert Stone Cobble: To add more uses to the Desert Stones.
+  
      I suppossed they are harder than regular Stones so it
      cracks at 50% and releases the Cobbles or just regular
      Desert Stones.
      From dig Desert Stone
 
   Desert Iron Ore: I know that others MODs add ores to the 
+  
      Desert Stones, mine also does it, but just Iron, I supposed
      the red color is because of the iron, so it goes with more
      high probability than regular Stones and it doesn't add
@@ -119,6 +130,7 @@ Tunning:
      does it.
 
   Dry Leaves: Just a cube of Leaves toasted :P Well I found the
+  
      Leaves unuseful, so I thought to turn them into Straw, ok
      it is not the same, but well, why not? Just dry them in a
      Furnace and then put together to create the Straw
@@ -126,15 +138,18 @@ Tunning:
      [Leaves]
 
   Gneiss: high grade metamorphic rock formed from Schist, very
+  
      common, and used in construction. It sometimes brokes in
      Gneiss Cobble when being digged.
      COOKING
      [Schist]
 
   Gneiss Cobble: brick version of the gneiss.
+  
      From dig gneiss
 
   Mud: mixture of water and some combination of soil, silt, and
+  
      clay. Used for build houses, specially in desertic regions.
      It brokes in 4 Mud Lumps when digged.
      CRAFT -> 3
@@ -145,6 +160,7 @@ Tunning:
      [Mud Lump] [Mud Lump]
 
   Old Red Sandstone: a light red sandstone, in fact it's
+  
      sandstone with iron that gives it this color.
      CRAFT -> 4
      [Sandstone] [Sandstone]
@@ -153,6 +169,7 @@ Tunning:
      [Old Red Sandstone Cobble]
 
   Old Red Sandstone Cobble: Cobbles of Old Red Sandstone.
+  
      CRAFT -> 4
      [Sandstone Cobble] [Sandstone Cobble]
      [Iron Lumb] [Sandstone Cobble]
@@ -161,6 +178,7 @@ Tunning:
                         release with its own Cobbles.
 
   Reinforced Cobble: brick with crossed wooden.
+  
      CRAFT -> 1
      [Stick] [] [Stick]
      [] [Cobble] []
@@ -227,56 +245,65 @@ Tunning:
      [Sandstone] [Sandstone]
 
 
-  FURNITURE NODES
+  ##FURNITURE NODES
   Just started so they are few ones
 
   Box: a more smaller container than the Chest, but it requires
+  
      less wood. As cheep as 4 woods and have 16 slots. The craft
      is a little weird but I think it makes sense and avoids
      collision with the recipe of Hardwood of the MOD 
      building_blocks.
+     
      CRAFT -> 2
      [Wood] [] [Wood]
      [] [] []
      [Wood] [] [Wood]
 
   Chain: climbable chain.
+  
      CRAFT -> 2
      [Steel Ingot]
      [Steel Ingot]
      [Steel Ingot]
 
   Iron Bars: alternative window for the Glass.
+  
      CRAFT -> 3
      [Steel Ingot] [] [Steel Ingot]
      [Steel Ingot] [] [Steel Ingot]
      [Steel Ingot] [] [Steel Ingot]
 
   Iron Grille: alternative window for the Glass.
+  
      CRAFT -> 3
      []          [Iron Bars]      []
      [Iron Bars]     []       [Iron Bars]
      []          [Iron Bars]      []
 
   Wood Bars: alternative window for the Glass.
+  
      CRAFT -> 3
      [Stick] [] [Stick]
      [Stick] [] [Stick]
      [Stick] [] [Stick]
 
   Wood Frame: alternative window for the Glass.
+  
      CRAFT -> 1
      [Stick] [Stick]  [Stick]
      [Stick] [Glass]  [Stick]
      [Stick] [Stick]  [Stick]
 
 
-License:
+##License:
 Sourcecode: WTFPL (see below)
 Graphics: WTFPL (see below)
 
-See also:
+#See also:
 http://minetest.net/
+
+---
 
          DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                     Version 2, December 2004
