@@ -27,7 +27,7 @@ minetest.register_node('darkage:box', {
 	paramtype2 = "facedir",
 	walkable = true,
 	groups = { snappy = 3 },
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 	on_construct = function(pos)
 		local meta = minetest.env:get_meta(pos)
 		meta:set_string("formspec",
@@ -66,7 +66,7 @@ minetest.register_node('darkage:wood_shelves', {
 	paramtype2 = "facedir",
 	walkable = true,
 	groups = { snappy = 3 },
-	sounds = default.node_sound_leaves_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 	on_construct = function(pos)
 		local meta = minetest.env:get_meta(pos)
 		meta:set_string("formspec",
