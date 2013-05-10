@@ -26,18 +26,35 @@ modyfied by addi
   
 
 ##Release Notes
+Version 1.0.1 
 
-  Version 0.3
-    * 29 Nodes + 3 Craft Items
-    * Furniture and building decoration
-    * Stone layers
+ * fixed init.lua wich get broken by upload on github
 
-  Version 0.2
-    * 13 Nodes
-    * Sedimentary stones
 
-  Version 0.1
-    * 6 Nodes
+Version 1.0 
+
+ * a lot of more nodes because using moreblocks stairgen
+ * 2 sorts of medieval glass added
+ * chalk can crafted from chalk powder
+ * fixed some craft reziep conflicts
+
+Version 0.3
+
+* 29 Nodes + 3 Craft Items
+* Furniture and building decoration
+* Stone layers
+
+
+
+Version 0.2
+
+* 13 Nodes
+* Sedimentary stones
+
+
+Version 0.1
+
+* 6 Nodes
 
 PS: This document has been structured as the README.txt of PilzAdam in 
     his Bed MOD.
@@ -186,15 +203,18 @@ PS: This document has been structured as the README.txt of PilzAdam in
   
   Sandstone Cobble: brick version of the Sandstone, good for
      buildings with a pale color.
+	 
      COOKING
      [Sandstone]
 
   Schist: medium grade metamorphic rock from Slate.
+  
      COOKING
      [Slate]
 
   Silt: granular material of a size somewhere between sand and clay.
      It brokes in 4 Silt Lumps.
+	 
      CRAFT -> 1
      [Silt Lump] [Silt Lump]
      [Silt Lump] [Silt Lump]
@@ -202,6 +222,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
   Slate: fine-grained, foliated, homogeneous metamorphic rock
      derived from an original shale-type sedimentary rock through
      low-grade regional metamorphism. It is used to build roof.
+	 
      COOKING
      [Shale]
      COOKING
@@ -216,6 +237,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
      as building traditional building material in zones where
      slate is easy to find.
      Note: It has stairs and slabs.
+	 
      CRAFT -> 2
      [Slate Cobble] [Slate Cobble]
      [Slate Cobble] [Slate Cobble]
@@ -223,6 +245,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
   Straw: a cube of yellish straw, try them in the roofs they will
      be very nice. Used also as traditional building material
      from ancient times.
+	 
      CRAFT -> 2
      [Shrub] [Shrub]
      [Shrub] [Shrub]
@@ -232,6 +255,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
 
   Straw Bale: a decoration item, looks great for a farm or a 
      country side house.
+	 
      CRAFT -> 1
      [Straw] [Straw]
      [Straw] [Straw]
@@ -240,13 +264,14 @@ PS: This document has been structured as the README.txt of PilzAdam in
      from Desert Sand. The idea is that Desert Sand is stonner
      than regular Sand, so it takes less to create a Desert
      Stone than a Sandstone.
+	 
      CRAFT -> 2
      [Sandstone] [Sandstone]
      [Sandstone] [Sandstone]
 
 
-  ##FURNITURE NODES
-  Just started so they are few ones
+##FURNITURE NODES
+Just started so they are few ones
 
   Box: a more smaller container than the Chest, but it requires
   
@@ -295,7 +320,24 @@ PS: This document has been structured as the README.txt of PilzAdam in
      [Stick] [Glass]  [Stick]
      [Stick] [Stick]  [Stick]
 
+  Medieval Glass: a good looking glass, with small tiles
+  
+     CRAFT -> 8
+     [Glass]       [steel_ingot]       [Glass]
+     [steel_ingot] [Glass]       [steel_ingot]
+     [Glass]       [steel_ingot]       [Glass]
 
+     or:
+     CRAFT -> 1
+     [Medieval Glow Glass]
+	
+  Medieval Glow Glass: a good looking glass, with small tiles wich are glowing by itself
+  
+     CRAFT -> 8
+     [Medieval Glass]
+     [torch] 
+	 
+	 
 ##License:
 Sourcecode: WTFPL (see below)
 Graphics: WTFPL (see below)
@@ -318,8 +360,3 @@ http://minetest.net/
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
   0. You just DO WHAT THE FUCK YOU WANT TO. 
-
-
-
-
-
