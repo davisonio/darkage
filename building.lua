@@ -33,6 +33,14 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
+	output = 'darkage:glass 1',
+	recipe = {
+		{'darkage:glow_glass'},
+	}
+})
+
+
+minetest.register_craft({
 	output = 'darkage:glass 8',
 	recipe = {
 		{'default:glass', 'default:steel_ingot', 'default:glass'},
@@ -137,5 +145,31 @@ minetest.register_craft({
 	output = 'default:wood',
 	recipe = {
     {'darkage:reinforced_wood_right'},
+	}
+})
+
+minetest.register_craft({
+	output = 'darkage:glow_glass 1',
+	recipe = {
+		{'darkage:glass', '', ''},
+		{'default:torch', '', ''},
+		{'', '', ''},
+	}
+})
+
+minetest.register_craft({
+	output = 'darkage:glass 1',
+	recipe = {
+		{'darkage:glow_glass'},
+	}
+})
+
+
+minetest.register_craft({
+	output = 'darkage:glass 8',
+	recipe = {
+		{'default:glass', 'default:steel_ingot', 'default:glass'},
+		{'default:steel_ingot', 'default:glass', 'default:steel_ingot'},
+		{'default:glass', 'default:steel_ingot', 'default:glass'},
 	}
 })
