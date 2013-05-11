@@ -3,7 +3,6 @@ print (" ---- Dark Age is Loading! ---- ")
 dofile(minetest.get_modpath("darkage").."/mapgen.lua")
 dofile(minetest.get_modpath("darkage").."/building.lua")
 dofile(minetest.get_modpath("darkage").."/furniture.lua")
-dofile(minetest.get_modpath("darkage").."/compatibility.lua")
 --dofile(minetest.get_modpath("darkage").."/stairs.lua")
 dofile(minetest.get_modpath("darkage").."/stairsplus.lua")
 ----------
