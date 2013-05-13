@@ -33,10 +33,19 @@ Version 1.0.1
 
 Version 1.0 
 
- * a lot of more nodes because using moreblocks stairgen
- * 2 sorts of medieval glass added
- * chalk can crafted from chalk powder
- * fixed some craft reziep conflicts
+* compatibility with stairsplus added
+* added new item iron_stick
+* added craft reziep for iron stick
+* changed reziep of iron_bars to avoid conflicts with ironbars mod
+* changed reziep of chain to avoid conflicts with 3d furniture mod
+* changed reziep of darkage:stonebrick to avoid conflicts with moreblocks
+* dissabled marble_tile to avoid the message "texture not found"
+* added compatibililty with stairsplus (now its moreblocks)
+* added darkage:glass a nice looking glass that must be in this mod 
+* changed the sound_node_leaves_default to wood_default from  box and wooden shelfes
+* added craft reziep for darkage:chalk
+* improved the textures of reinforced wood and chalk to save a bit more loadtime on servers
+* added another reziep for darkage straw (this can be crafted now, if farming is installed, with farming:harvested_weed
 
 Version 0.3
 
