@@ -1,66 +1,145 @@
-darkage = {};
-function darkage.register_stairs(modname, subname, groups, images, desc)
-	table.insert(circular_saw.known_stairs, modname..":"..subname);
-	recipeitem = modname..":"..subname;
-	desc_stair = desc.." stair";
-	desc_slab = desc.." slab";
-	desc_panel = desc.." panel";
-	desc_micro = desc.." micro";
-	drop = subname
-	register_stair(modname, subname, recipeitem, groups, images, desc_stair, drop)
-	register_slab(modname, subname, recipeitem, groups, images, desc_slab, drop)
-	register_panel(modname, subname, recipeitem, groups, images, desc_panel, drop)
-	register_micro(modname, subname, recipeitem, groups, images, desc_micro, drop)
-end
-darkage.register_stairs("darkage","basalt_cobble",
-	{cracky=3},
-	{"darkage_basalt_cobble.png"},
-	"Basalt Cobble"
-)
+--slate Cobble
+stairsplus:register_all("darkage", "slate_cobble", "darkage:slate_cobble", {
+description = "Slate Cobble",
+tiles = {"darkage_slate_cobble.png"},
+groups = {cracky=2},
+sounds = default.node_sound_stone_defaults(),
+})
 
-darkage.register_stairs("darkage","slate_tale",
-	{cracky=3},
-	{"darkage_slate_tale.png"},
-	"Slate Tale"
-)
+--slate
+stairsplus:register_all("darkage", "slate", "darkage:slate", {
+description = "Slate",
+tiles = {"darkage_slate.png","darkage_slate.png","darkage_slate_side.png"},
+groups = {cracky=2},
+sounds = default.node_sound_stone_defaults(),
+})
 
-darkage.register_stairs("darkage","straw",
-	 {snappy=3, flammable=2},
-	{"darkage_straw.png"},
-	"Straw"
-)
+--slate tale
+stairsplus:register_all("darkage", "slate_tale", "darkage:slate_tale", {
+description = "Slate Tale",
+tiles = {"darkage_slate_tale.png"},
+groups = {cracky=2},
+sounds = default.node_sound_stone_defaults(),
+})
 
-darkage.register_stairs("darkage","stone_brick",
-	{cracky=3},
-	{"darkage_stone_brick.png"},
-	"Stone Brick"
-)
+--marble
+stairsplus:register_all("darkage", "marble", "darkage:marble", {
+description = "Marble",
+tiles = {"darkage_marble.png"},
+groups = {cracky=2},
+sounds = default.node_sound_stone_defaults(),
+})
 
-darkage.register_stairs("darkage","ors_cobble",
-	{cracky=3},
-	{"darkage_ors_cobble.png"},
-	"Old Red Sandtone"
-)
+--stone brick
+stairsplus:register_all("darkage", "stone_brick", "darkage:stone_brick", {
+description = "Stone Brick",
+tiles = {"darkage_stone_brick.png"},
+groups = {cracky=3},
+sounds = default.node_sound_stone_defaults(),
+})
 
---darkage.register_stairs("darkage","desert_stone_cobble",
---	{cracky=3},
---	{"darkage_desert_stone_cobble.png"},
---	"Desert Stone Cobble"
---)
+--straw
+stairsplus:register_all("darkage", "straw", "darkage:straw", {
+description = "Straw",
+tiles = {"darkage_straw.png"},
+groups = {snappy=3, flammable=2},
+sounds = default.node_sound_leaves_defaults(),
+})
 
-darkage.register_stairs("darkage","slate_cobble",
-	{cracky=3},
-	{"darkage_slate_cobble.png"},
-	"Slate Cobble"
-)
---darkage.register_stairs("darkage","sandstone_cobble",
---	{cracky=3},
---	{"darkage_sandstone_cobble.png"},
---	"Sandstone Cobble"
---) 
+--straw_bale
+stairsplus:register_all("darkage", "straw_bale", "darkage:straw_bale", {
+description = "Straw Bale",
+tiles = {"darkage_straw_bale.png"},
+groups = {snappy=2, flammable=2},
+sounds = default.node_sound_leaves_defaults(),
+})
 
-darkage.register_stairs("darkage","gneiss_cobble",
-	{cracky=3},
-	{"darkage_gneiss_cobble.png"},
-	"Gneiss Cobble"
-)
+--serpentine
+stairsplus:register_all("darkage", "serpentine", "darkage:serpentine", {
+description = "Serpentine",
+tiles = {"darkage_serpentine.png"},
+groups = {cracky=3},
+sounds = default.node_sound_stone_defaults(),
+})
+
+--shist
+stairsplus:register_all("darkage", "schist", "darkage:schist", {
+description = "Schist",
+tiles = {"darkage_schist.png"},
+groups = {cracky=3},
+sounds = default.node_sound_stone_defaults(),
+})
+
+--gneiss
+stairsplus:register_all("darkage", "gneiss", "darkage:gneiss", {
+description = "Gneiss",
+tiles = {"darkage_gneiss.png"},
+groups = {cracky=3},
+sounds = default.node_sound_stone_defaults(),
+})
+
+--gneiss_cobble
+stairsplus:register_all("darkage", "gneiss_cobble", "darkage:gneiss_cobble", {
+description = "Gneiss Cobble",
+tiles = {"darkage_gneiss_cobble.png"},
+groups = {cracky=3},
+sounds = default.node_sound_stone_defaults(),
+})
+
+--basalt
+stairsplus:register_all("darkage", "basalt", "darkage:basalt", {
+description = "Basalt",
+tiles = {"darkage_basalt.png"},
+groups = {cracky=3},
+sounds = default.node_sound_stone_defaults(),
+})	
+
+--basalt cobble
+stairsplus:register_all("darkage", "basalt_cobble", "darkage:basalt_cobble", {
+description = "Basalt Cobble",
+tiles = {"darkage_basalt_cobble.png"},
+groups = {cracky=3},
+sounds = default.node_sound_stone_defaults(),
+})	
+
+--shale
+stairsplus:register_all("darkage", "shale", "darkage:shale", {
+description = "Shale",
+tiles = {"darkage_shale.png","darkage_shale.png","darkage_shale_side.png"},
+groups = {crumbly=2,cracky=2},
+sounds = default.node_sound_stone_defaults(),
+})	
+
+--[[
+--no need for desert_stone cobble because its in minetest game
+stairsplus:register_all("darkage", "desert_stone_cobble", "darkage:desert_stone_cobble", {
+description = "Desert Stone Cobble",
+tiles = {"darkage_desert_stone_cobble.png"},
+groups = {cracky=3},
+sounds = default.node_sound_stone_defaults(),
+})	
+]]
+--old red sandstone
+stairsplus:register_all("darkage", "ors", "darkage:ors", {
+description = "Old Red Sandstone",
+tiles = {"darkage_ors.png"},
+groups = {crumbly=2,cracky=2},
+sounds = default.node_sound_stone_defaults(),
+})	
+
+--old red sandstone cobble
+stairsplus:register_all("darkage", "ors_cobble", "darkage:ors_cobble", {
+description = "Old Red Sandstone Cobble",
+tiles = {"darkage_ors_cobble.png"},
+groups = {crumbly=2,cracky=2},
+sounds = default.node_sound_stone_defaults(),
+})	
+--[[
+--no need for sandstone_cobble, because its in minetest game
+stairsplus:register_all("darkage", "sandstone_cobble", "darkage:sandstone_cobble", {
+description = "Sandstone Cobble",
+tiles = {"darkage_sandstone_cobble.png"},
+groups = {cracky=2},
+sounds = default.node_sound_stone_defaults(),
+})	
+]]
