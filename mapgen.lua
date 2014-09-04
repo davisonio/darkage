@@ -1,3 +1,19 @@
+--[[
+	This file generates:
+	darkage:desert_stone_with_iron
+	darkage:mud
+	darkage:silt
+	darkage:chalk
+	darkage:ors
+	darkage:shale
+	darkage:slate
+	darkage:schist
+	darkage:basalt
+	darkage:marble
+	darkage:serpentine
+	darkage:gneiss
+--]]
+
 local function generate_stratus(name, wherein, ceilin, ceil, minp, maxp, seed, stratus_chance, radius, radius_y, deep, height_min, height_max)
 	if maxp.y < height_min or minp.y > height_max then
 		return
