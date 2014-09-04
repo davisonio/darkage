@@ -203,7 +203,7 @@ minetest.register_node("darkage:lamp", {
 	description = "Lamp",
 	tiles = {"darkage_lamp.png"},
 	paramtype = "light",
-	light_source = LIGHT_MAX-1,
+	light_source = 7,
 	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3,flammable=1},
 	sounds = default.node_sound_glass_defaults(),
 })
@@ -253,7 +253,7 @@ minetest.register_node("darkage:box", {
 		inv:set_size("main", 16)
 	end,
 	can_dig = function(pos,player)
-		local meta = minetest.env:get_meta(pos);
+		local meta = minetest.get_meta(pos);
 		local inv = meta:get_inventory()
 		return inv:is_empty("main")
 	end,
