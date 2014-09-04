@@ -14,10 +14,10 @@ groups = {cracky=2},
 sounds = default.node_sound_stone_defaults(),
 })
 
---slate tale
-stairsplus:register_all("darkage", "slate_tale", "darkage:slate_tale", {
+--slate tile
+stairsplus:register_all("darkage", "slate_tile", "darkage:slate_tile", {
 description = "Slate Tale",
-tiles = {"darkage_slate_tale.png"},
+tiles = {"darkage_slate_tile.png"},
 groups = {cracky=2},
 sounds = default.node_sound_stone_defaults(),
 })
@@ -92,7 +92,7 @@ description = "Basalt",
 tiles = {"darkage_basalt.png"},
 groups = {cracky=3},
 sounds = default.node_sound_stone_defaults(),
-})	
+})
 
 --basalt cobble
 stairsplus:register_all("darkage", "basalt_cobble", "darkage:basalt_cobble", {
@@ -100,7 +100,7 @@ description = "Basalt Cobble",
 tiles = {"darkage_basalt_cobble.png"},
 groups = {cracky=3},
 sounds = default.node_sound_stone_defaults(),
-})	
+})
 
 --shale
 stairsplus:register_all("darkage", "shale", "darkage:shale", {
@@ -108,24 +108,16 @@ description = "Shale",
 tiles = {"darkage_shale.png","darkage_shale.png","darkage_shale_side.png"},
 groups = {crumbly=2,cracky=2},
 sounds = default.node_sound_stone_defaults(),
-})	
+})
 
---[[
---no need for desert_stone cobble because its in minetest game
-stairsplus:register_all("darkage", "desert_stone_cobble", "darkage:desert_stone_cobble", {
-description = "Desert Stone Cobble",
-tiles = {"darkage_desert_stone_cobble.png"},
-groups = {cracky=3},
-sounds = default.node_sound_stone_defaults(),
-})	
-]]
+
 --old red sandstone
 stairsplus:register_all("darkage", "ors", "darkage:ors", {
 description = "Old Red Sandstone",
 tiles = {"darkage_ors.png"},
 groups = {crumbly=2,cracky=2},
 sounds = default.node_sound_stone_defaults(),
-})	
+})
 
 --old red sandstone cobble
 stairsplus:register_all("darkage", "ors_cobble", "darkage:ors_cobble", {
@@ -133,13 +125,12 @@ description = "Old Red Sandstone Cobble",
 tiles = {"darkage_ors_cobble.png"},
 groups = {crumbly=2,cracky=2},
 sounds = default.node_sound_stone_defaults(),
-})	
---[[
---no need for sandstone_cobble, because its in minetest game
-stairsplus:register_all("darkage", "sandstone_cobble", "darkage:sandstone_cobble", {
-description = "Sandstone Cobble",
-tiles = {"darkage_sandstone_cobble.png"},
-groups = {cracky=2},
+})
+
+--Serpentine
+stairsplus:register_all("darkage", "serpentine", "darkage:serpentine", {
+description = "Serpentine",
+tiles = {"darkage_serpentine.png"},
+groups = {crumbly=2,cracky=2},
 sounds = default.node_sound_stone_defaults(),
-})	
-]]
+})

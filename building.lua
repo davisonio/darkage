@@ -1,5 +1,5 @@
 minetest.register_node("darkage:glass", {
-	description = "medieval Glass",
+	description = "Medieval Glass",
 	drawtype = "glasslike",
 	tiles = {"darkage_glass.png"},
 	inventory_image = minetest.inventorycube("darkage_glass.png"),
@@ -11,7 +11,7 @@ minetest.register_node("darkage:glass", {
 })
 
 minetest.register_node("darkage:glow_glass", {
-	description = "medieval glow glass",
+	description = "Medieval Glow Glass",
 	drawtype = "glasslike",
 	tiles = {"darkage_glass.png"},
 	inventory_image = minetest.inventorycube("darkage_glass.png"),

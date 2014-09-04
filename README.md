@@ -1,7 +1,6 @@
 #DarkAge MOD for MINETEST
-orginal by Master Gollum 
-modyfied by addi
-
+Original mod by Master Gollum 
+Modified by addi and CraigyDavi
 
 ##Introduction:
   This mod adds a few new blocks that allows to create new buildings in a
@@ -26,9 +25,25 @@ modyfied by addi
   
 
 ##Release Notes
+Version 1.2
+* corrected Sounds of Stairs
+* updated to new Moreblocks api
+* added Serpentine Stairs
+
+Version 1.1
+* Fix spelling mistakes in README file
+* Bug fix
+* Rename slate_tale to slate_tile
+* Remove unneeded code
+* Add marble tile
+* Remove unneeded code
+* Capitalise a couple of descriptions
+* Add marble tile texture
+* Rename alias.lua to aliases.lua
+
 Version 1.0.1 
 
- * fixed init.lua wich get broken by upload on github
+ * fixed init.lua which get broken by upload on github
 
 
 Version 1.0 
@@ -36,13 +51,13 @@ Version 1.0
 * compatibility with stairsplus added
 * added new item iron_stick
 * added craft reziep for iron stick
-* changed reziep of iron_bars to avoid conflicts with ironbars mod
+* changed reziep of iron_bars to avoid conflicts with iron bars mod
 * changed reziep of chain to avoid conflicts with 3d furniture mod
 * changed reziep of darkage:stonebrick to avoid conflicts with moreblocks
-* dissabled marble_tile to avoid the message "texture not found"
-* added compatibililty with stairsplus (now its moreblocks)
+* disabled marble_tile to avoid the message "texture not found"
+* added compatibility with stairsplus (now its moreblocks)
 * added darkage:glass a nice looking glass that must be in this mod 
-* changed the sound_node_leaves_default to wood_default from  box and wooden shelfes
+* changed the sound_node_leaves_default to wood_default from  box and wooden shelves
 * added craft reziep for darkage:chalk
 * improved the textures of reinforced wood and chalk to save a bit more loadtime on servers
 * added another reziep for darkage straw (this can be crafted now, if farming is installed, with farming:harvested_weed
@@ -71,14 +86,14 @@ PS: This document has been structured as the README.txt of PilzAdam in
 ###How to install:
   Unzip the archive an place it in minetest-base-directory/mods/minetest/
   if you have a windows client or a linux run-in-place client. If you 
-  have a linux system-wide instalation place it in 
+  have a linux system-wide installation place it in 
   ~/.minetest/mods/minetest/.
   If you want to install this mod only in one world create the folder
   worldmods/ in your worlddirectory.
   For further information or help see:
     http://wiki.minetest.com/wiki/Installing_Mods
 
-###Tunning:
+###Tuning:
   Comments the following lines to remove what you don't like:
   (To comment them just add -- at the beginning of their lines)
 
@@ -99,7 +114,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
          invented. I have to improve this texture, it is ugly :P
      CRAFT -> 4
      [Sand] [Sand]
-     [Clay Lumb] [Straw]
+     [Clay Lump] [Straw]
 
   Basalt: a darken version of the default Stone
   
@@ -114,7 +129,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
 
   Chalk: a soft, white and porous sedimentary rock. It becomes
   
-     Chalk Powder when digged. Can't be craft, only found as
+     Chalk Powder when dug. Can't be craft, only found as
      stratum.
 
   Chalk Powder: pile of chalk from digging Chalk stones. Can
@@ -124,7 +139,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
   Cobblestone with Plaster: Cobbles where has been applied a
   
      layer of white plaster.
-     When digged it lost the plaster layer!
+     When dug it lost the plaster layer!
      CRAFT -> 2
      [Cobblestone] [Chalk Powder]
      [Cobblestone] [Chalk Powder]
@@ -141,7 +156,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
 
   Desert Stone Cobble: To add more uses to the Desert Stones.
   
-     I suppossed they are harder than regular Stones so it
+     I supposed they are harder than regular Stones so it
      cracks at 50% and releases the Cobbles or just regular
      Desert Stones.
      From dig Desert Stone
@@ -157,7 +172,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
 
   Dry Leaves: Just a cube of Leaves toasted :P Well I found the
   
-     Leaves unuseful, so I thought to turn them into Straw, ok
+     Leaves are not useful so I thought to turn them into Straw, ok
      it is not the same, but well, why not? Just dry them in a
      Furnace and then put together to create the Straw
      COOKING
@@ -165,8 +180,8 @@ PS: This document has been structured as the README.txt of PilzAdam in
 
   Gneiss: high grade metamorphic rock formed from Schist, very
   
-     common, and used in construction. It sometimes brokes in
-     Gneiss Cobble when being digged.
+     common, and used in construction. It sometimes brakes in
+     Gneiss Cobble when being dug.
      COOKING
      [Schist]
 
@@ -176,8 +191,8 @@ PS: This document has been structured as the README.txt of PilzAdam in
 
   Mud: mixture of water and some combination of soil, silt, and
   
-     clay. Used for build houses, specially in desertic regions.
-     It brokes in 4 Mud Lumps when digged.
+     clay. Used for build houses, specially in desert regions.
+     It brakes in 4 Mud Lumps when dug.
      CRAFT -> 3
      [Dirt] [Dirt]
      [Clay Lump] [Silt Lump]
@@ -190,7 +205,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
      sandstone with iron that gives it this color.
      CRAFT -> 4
      [Sandstone] [Sandstone]
-     [Iron Lumb] [Sandstone]
+     [Iron Lump] [Sandstone]
      COOKING
      [Old Red Sandstone Cobble]
 
@@ -198,7 +213,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
   
      CRAFT -> 4
      [Sandstone Cobble] [Sandstone Cobble]
-     [Iron Lumb] [Sandstone Cobble]
+     [Iron Lump] [Sandstone Cobble]
      COOKING
      [Desert Stone] --> I think I will change it in the future
                         release with its own Cobbles.
@@ -222,7 +237,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
      [Slate]
 
   Silt: granular material of a size somewhere between sand and clay.
-     It brokes in 4 Silt Lumps.
+     It brakes in 4 Silt Lumps.
 	 
      CRAFT -> 1
      [Silt Lump] [Silt Lump]
@@ -242,7 +257,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
   Slate Cobble: Cobble obtained from Slate
      From dig Slate
 
-  Slate Tale: Nice blue slate tales for roofs. They has been used
+  Slate Tile: Nice blue slate tiles for roofs. They has been used
      as building traditional building material in zones where
      slate is easy to find.
      Note: It has stairs and slabs.
@@ -251,7 +266,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
      [Slate Cobble] [Slate Cobble]
      [Slate Cobble] [Slate Cobble]
 
-  Straw: a cube of yellish straw, try them in the roofs they will
+  Straw: a cube of yellowish straw, try them in the roofs they will
      be very nice. Used also as traditional building material
      from ancient times.
 	 
@@ -270,7 +285,7 @@ PS: This document has been structured as the README.txt of PilzAdam in
      [Straw] [Straw]
  
   Desert Stone: just the default block, it can be obtained now
-     from Desert Sand. The idea is that Desert Sand is stonner
+     from Desert Sand. The idea is that Desert Sand is stonier
      than regular Sand, so it takes less to create a Desert
      Stone than a Sandstone.
 	 
@@ -340,7 +355,7 @@ Just started so they are few ones
      CRAFT -> 1
      [Medieval Glow Glass]
 	
-  Medieval Glow Glass: a good looking glass, with small tiles wich are glowing by itself
+  Medieval Glow Glass: a good looking glass, with small tiles which are glowing by itself
   
      CRAFT -> 8
      [Medieval Glass]

@@ -1,9 +1,9 @@
-print (" ---- Dark Age is Loading! ---- ")
+print (" ---- Dark Age Version 1.2 is Loading! ---- ")
 -- Commend this lines if you don't like some of this features
 dofile(minetest.get_modpath("darkage").."/mapgen.lua")
 dofile(minetest.get_modpath("darkage").."/building.lua")
 dofile(minetest.get_modpath("darkage").."/furniture.lua")
-dofile(minetest.get_modpath("darkage").."/alias.lua")
+dofile(minetest.get_modpath("darkage").."/aliases.lua")
 if minetest.get_modpath("moreblocks") then
 dofile(minetest.get_modpath("darkage").."/stairsplus.lua")--only if moreblocks installed
 else
@@ -57,14 +57,6 @@ minetest.register_node("darkage:cobble_with_plaster", {
 	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults(),
 })
-
---minetest.register_node("darkage:desert_stone_cobble", {
---	description = "Desert Stone Cobble",
---	tiles = {"darkage_desert_stone_cobble.png"},
---	is_ground_content = true,
---	groups = {cracky=3},
---	sounds = default.node_sound_stone_defaults()
---})
 
 minetest.register_node("darkage:desert_stone_with_iron", {
 	description = "Desert Iron Ore",
@@ -129,7 +121,6 @@ minetest.register_node("darkage:marble", {
 	sounds = default.node_sound_stone_defaults()
 })
 
-
 minetest.register_node("darkage:mud", {
   description = "Mud",
 	tiles = {"darkage_mud_up.png","darkage_mud.png"},
@@ -157,17 +148,6 @@ minetest.register_node("darkage:ors_cobble", {
 	groups = {crumbly=2,cracky=2},
 	sounds = default.node_sound_stone_defaults()
 })
-
-
---minetest.register_node("darkage:sandstone_cobble", {
---  description = "Sandstone Cobble",
---	tiles = {"darkage_sandstone_cobble.png"},
---	is_ground_content = true,
---	groups = {crumbly=2,cracky=2},
---	sounds = default.node_sound_stone_defaults()
---})
-
-
 
 minetest.register_node("darkage:serpentine", {
   description = "Serpentine",
@@ -221,9 +201,9 @@ minetest.register_node("darkage:slate_cobble", {
 	sounds = default.node_sound_stone_defaults()
 })
 
-minetest.register_node("darkage:slate_tale", {
-  description = "Slate Tale",
-	tiles = {"darkage_slate_tale.png"},
+minetest.register_node("darkage:slate_tile", {
+  description = "Slate Tile",
+	tiles = {"darkage_slate_tile.png"},
 	is_ground_content = true,
 	groups = {cracky=2},
 	sounds = default.node_sound_stone_defaults()
@@ -262,31 +242,13 @@ minetest.register_node("darkage:marble", {
 	sounds = default.node_sound_stone_defaults()
 })
 
---minetest.register_node("darkage:marble_tile", { --disabled because texture not found
---  description = "Marble Tile",
---	tiles = {"darkage_marble_tile.png"},
---	is_ground_content = true,
---	groups = {cracky=2},
---	sounds = default.node_sound_stone_defaults()
---})
-
----------------
--- Overrides
----------------
---minetest.registered_nodes["default:desert_stone"].drop= {
---		max_items = 1,
---		items = {
---			{
---				-- player will get cobbles with 1/3 chance
---				items = {'darkage:desert_stone_cobble'},
---				rarity = 2,
---			},
---			{
---				items = {'default:desert_stone'},
---			}
---		}
---}
-
+minetest.register_node("darkage:marble_tile", {
+  description = "Marble Tile",
+	tiles = {"darkage_marble_tile.png"},
+	is_ground_content = true,
+	groups = {cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
 
 ---------------
 -- Crafts Items
@@ -315,8 +277,6 @@ minetest.register_craftitem("darkage:iron_stick", {
 ----------
 -- Crafts
 ----------
-
---sand+clay+water+straw
 
 minetest.register_craft({
 	output = 'darkage:adobe 4',
@@ -391,14 +351,6 @@ minetest.register_craft({
 	}
 })
 
---minetest.register_craft({
---	output = 'darkage:ors_cobble 4',
---	recipe = {
---    {'darkage:sandstone_cobble','darkage:sandstone_cobble'},
---		{'default:iron_lump','darkage:sandstone_cobble'},
---	}
---})
-
 minetest.register_craft({
 	output = 'darkage:silt 3',
 	recipe = {
@@ -416,7 +368,7 @@ minetest.register_craft({
 })
 
 minetest.register_craft({
-	output = 'darkage:slate_tale 2',
+	output = 'darkage:slate_tile 2',
 	recipe = {
     {'darkage:slate_cobble','darkage:slate_cobble'},
 		{'darkage:slate_cobble','darkage:slate_cobble'},
@@ -483,23 +435,11 @@ minetest.register_craft({
 	recipe = "darkage:basalt_cobble",
 })
 
---minetest.register_craft({
---	type = "cooking",
---	output = "default:desert_stone",
---	recipe = "darkage:desert_stone_cobble",
---})
-
 minetest.register_craft({
 	type = "cooking",
 	output = "darkage:dry_leaves",
 	recipe = "default:leaves",
 })
-
---minetest.register_craft({
---	type = "cooking",
---	output = "darkage:sandstone_cobble",
---	recipe = "default:sandstone",
---})
 
 minetest.register_craft({
 	type = "cooking",
@@ -518,13 +458,6 @@ minetest.register_craft({
 	output = "darkage:ors",
 	recipe = "darkage:ors_cobble",
 })
-
-
---minetest.register_craft({
---	type = "cooking",
---	output = "darkage:sandstone_cobble",
---	recipe = "default:sandstone",
---})
 
 minetest.register_craft({
 	type = "cooking",
