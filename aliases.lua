@@ -1,7 +1,8 @@
+-- Aliases due to changes in minetest_game.
 minetest.register_alias("darkage:sandstone_cobble","default:sandstonebrick")
 minetest.register_alias("darkage:desert_stone_cobble","default:desert_stonebrick")
 
-
+-- Messy stair/slab aliases
 minetest.register_alias("darkage:stair_desert_stone_cobble_wall_half","default:stair_desert_stonebrick_wall_half")
 minetest.register_alias("darkage:slab_desert_stone_cobble_inverted","default:slab_desert_stonebrick_inverted")
 minetest.register_alias("darkage:stair_desert_stone_cobble_inverted","default:stair_desert_stonebrick_inverted")
@@ -28,8 +29,6 @@ minetest.register_alias("darkage:stair_desert_stone_cobble","default:stair_deser
 minetest.register_alias("darkage:panel_desert_stone_cobble_vertical","default:panel_desert_stonebrick_vertical")
 minetest.register_alias("darkage:stair_desert_stone_cobble_inner_inverted","default:stair_desert_stonebrick_inner_inverted")
 minetest.register_alias("darkage:slab_desert_stone_cobble_three_quarter_inverted","default:slab_desert_stonebrick_three_quarter_inverted")
-
-
 minetest.register_alias("darkage:stair_sandstone_cobble_wall_half","default:stair_sandstonebrick_wall_half")
 minetest.register_alias("darkage:slab_sandstone_cobble_inverted","default:slab_sandstonebrick_inverted")
 minetest.register_alias("darkage:stair_sandstone_cobble_inverted","default:stair_sandstonebrick_inverted")
@@ -57,7 +56,7 @@ minetest.register_alias("darkage:panel_sandstone_cobble_vertical","default:panel
 minetest.register_alias("darkage:stair_sandstone_cobble_inner_inverted","default:stair_sandstonebrick_inner_inverted")
 minetest.register_alias("darkage:slab_sandstone_cobble_three_quarter_inverted","default:slab_sandstonebrick_three_quarter_inverted")
 
---Add aliases when slate_tale was renamed to slate_tile
+-- slate_tale -> slate_tile
 minetest.register_alias("darkage:slate_tile","darkage:slate_tale")
 minetest.register_alias("darkage:slab_slate_tile_inverted","darkage:slab_slate_tale_inverted")
 minetest.register_alias("darkage:slab_slate_tile_wall","darkage:slab_slate_tale_wall")

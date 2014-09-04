@@ -4,7 +4,7 @@ Of course, feel free to use them for any other type of construction.
 
 This mod originally created by MasterGollum and is now maintained and being improved upon by addi and CraigyDavi.
 
-**Depends:** default
+**Depends:** default, farming?, moreblocks?
 
 **License:** Code and textures, [WTFPL](http://www.wtfpl.net/txt/copying/)
 
