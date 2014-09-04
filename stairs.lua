@@ -1,8 +1,8 @@
 darkage = {}
 
 function darkage.register_stairs(modname, item, groups, images, description)
-  local recipeitem = modname..":"..item
-  local itemname = modname..":stair_"..item
+local recipeitem = modname..":"..item
+local itemname = modname..":stair_"..item
 	minetest.register_node(itemname, {
 		description = description.." stair",
 		drawtype = "nodebox",
@@ -39,7 +39,7 @@ function darkage.register_stairs(modname, item, groups, images, description)
 		},
 	})
 
-  itemname=modname..":slab_" .. item
+itemname=modname..":slab_" .. item
 
 	minetest.register_node(itemname, {
 		description = description.." slab",
@@ -119,7 +119,7 @@ darkage.register_stairs("darkage","slate_tile",
 )
 
 darkage.register_stairs("darkage","straw",
-	 {snappy=3, flammable=2},
+	{snappy=3, flammable=2},
 	{"darkage_straw.png"},
 	"Straw"
 )
@@ -149,12 +149,12 @@ darkage.register_stairs("darkage","ors_cobble",
 )
 
 darkage.register_stairs("darkage","serpentine",
- {cracky=3},
- {"darkage_serpentine.png"},
- "Serpentine"
- )
- 
- --slate Cobble
+{cracky=3},
+{"darkage_serpentine.png"},
+"Serpentine"
+)
+
+--slate Cobble
 stairsplus:register_all("darkage", "slate_cobble", "darkage:slate_cobble", {
 description = "Slate Cobble",
 tiles = {"darkage_slate_cobble.png"},
