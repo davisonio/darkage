@@ -26,11 +26,13 @@ Modified by addi and CraigyDavi
 
 ##Release Notes
 Version 1.2
+
 * corrected Sounds of Stairs
 * updated to new Moreblocks api
 * added Serpentine Stairs
 
 Version 1.1
+
 * Fix spelling mistakes in README file
 * Bug fix
 * Rename slate_tale to slate_tile
@@ -84,14 +86,14 @@ PS: This document has been structured as the README.txt of PilzAdam in
     his Bed MOD.
 
 ###How to install:
-  Unzip the archive an place it in minetest-base-directory/mods/minetest/
+  Unzip the archive an place it in minetest-base-directory/mods/
   if you have a windows client or a linux run-in-place client. If you 
   have a linux system-wide installation place it in 
-  ~/.minetest/mods/minetest/.
+  ~/.minetest/mods/.
   If you want to install this mod only in one world create the folder
-  worldmods/ in your worlddirectory.
+  worldmods/ in your worlddirectory. Remember to activate it for your world by pressing the 'configure' button and doubleclick darkage in the right list.
   For further information or help see:
-    http://wiki.minetest.com/wiki/Installing_Mods
+   http://wiki.minetest.net/Installing_Mods
 
 ###Tuning:
   Comments the following lines to remove what you don't like:
@@ -383,4 +385,4 @@ http://minetest.net/
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
-  0. You just DO WHAT THE FUCK YOU WANT TO. 
+  0. You just DO WHAT THE FUCK YOU WANT TO.
