@@ -26,7 +26,7 @@ minetest.register_node("darkage:serpentine", {
 
 minetest.register_node("darkage:mud", {
 	description = "Mud",
-	tiles = {"darkage_mud_up.png","darkage_mud.png"},
+	tiles = {"darkage_mud_top.png", "darkage_mud.png"},
 	is_ground_content = true,
 	groups = {crumbly=3},
 	drop = "darkage:mud_lump 4",
