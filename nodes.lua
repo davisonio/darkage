@@ -307,7 +307,6 @@ minetest.register_node("darkage:glass", {
 	description = "Medieval Glass",
 	drawtype = "glasslike",
 	tiles = {"darkage_glass.png"},
-	inventory_image = minetest.inventorycube("darkage_glass.png"),
 	paramtype = "light",
 	sunlight_propagates = true,
 	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3},
@@ -317,8 +316,7 @@ minetest.register_node("darkage:glass", {
 minetest.register_node("darkage:glow_glass", {
 	description = "Medieval Glow Glass",
 	drawtype = "glasslike",
-	tiles = {"darkage_glass.png"},
-	inventory_image = minetest.inventorycube("darkage_glass.png"),
+	tiles = {"darkage_glow_glass.png"},
 	paramtype = "light",
 	light_source = 18,
 	sunlight_propagates = true,
