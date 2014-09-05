@@ -1,6 +1,5 @@
 --[[
 	This file generates:
-	darkage:desert_stone_with_iron
 	darkage:mud
 	darkage:silt
 	darkage:chalk
@@ -214,7 +213,6 @@ end
 
 minetest.register_on_generated(function(minp, maxp, seed)
 print("DARKAGE: Generate stratus");
-generate_ore("darkage:desert_stone_with_iron", "default:desert_stone", minp, maxp, seed+0, 1/7/7/7, 3, 5, -15, 40)
 generate_claylike("darkage:mud", minp, maxp, seed+1, 4, 0, 2, 0)
 generate_claylike("darkage:silt", minp, maxp, seed+2, 4, -1, 1, 1)
 generate_stratus("darkage:chalk",

@@ -413,11 +413,3 @@ minetest.register_craft({
 	output = "darkage:ors_cobble",
 	recipe = "default:desert_stone",
 })
-
-minetest.register_craft({
-	output = 'default:desert_stone 2',
-	recipe = {
-	{'default:desert_sand','default:desert_sand'},
-		{'default:desert_sand','default:desert_sand'},
-	}
-})

@@ -85,3 +85,6 @@ minetest.register_alias("darkage:panel_slate_tile_top","darkage:panel_slate_tale
 minetest.register_alias("darkage:panel_slate_tile_vertical","darkage:panel_slate_tale_vertical")
 minetest.register_alias("darkage:micro_slate_tile_bottom","darkage:micro_slate_tale_bottom")
 minetest.register_alias("darkage:micro_slate_tile_top","darkage:micro_slate_tale_top")
+
+-- darkage:desert_stone_with_iron -> default:desert_stone
+minetest.register_alias("darkage:desert_stone_with_iron","default:desert_stone")

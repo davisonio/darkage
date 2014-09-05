@@ -110,15 +110,6 @@ minetest.register_node("darkage:chalk", {
 	sounds = default.node_sound_stone_defaults()
 })
 
-minetest.register_node("darkage:desert_stone_with_iron", {
-	description = "Desert Iron Ore",
-	tiles = {"default_desert_stone.png^darkage_mineral_iron.png"},
-	is_ground_content = true,
-	groups = {cracky=3},
-	drop = "default:iron_lump",
-	sounds = default.node_sound_stone_defaults(),
-})
-
 -- Cobble
 minetest.register_node("darkage:slate_cobble", {
 	description = "Slate Cobble",
