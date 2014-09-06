@@ -194,7 +194,7 @@ minetest.register_node("darkage:lamp", {
 	description = "Lamp",
 	tiles = {"darkage_lamp.png"},
 	paramtype = "light",
-	light_source = 7,
+	light_source = 18,
 	groups = {snappy=2,cracky=3,oddly_breakable_by_hand=3,flammable=1},
 	sounds = default.node_sound_glass_defaults(),
 })
@@ -316,7 +316,7 @@ minetest.register_node("darkage:glass", {
 minetest.register_node("darkage:glow_glass", {
 	description = "Medieval Glow Glass",
 	drawtype = "glasslike",
-	tiles = {"darkage_glow_glass.png"},
+	tiles = {"darkage_glass.png"},
 	paramtype = "light",
 	light_source = 18,
 	sunlight_propagates = true,
