@@ -1,10 +1,10 @@
 -- Naturally spawning blocks
-minetest.register_node("darkage:basalt", {
-	description = "Basalt",
-	tiles = {"darkage_basalt.png"},
+minetest.register_node("darkage:chalk", {
+	description = "Chalk",
+	tiles = {"darkage_chalk.png"},
 	is_ground_content = true,
-	drop = "darkage:basalt_cobble",
-	groups = {cracky=3},
+	drop = "darkage:chalk_powder 4",
+	groups = {crumbly=2,cracky=2},
 	sounds = default.node_sound_stone_defaults()
 })
 
@@ -35,12 +35,11 @@ minetest.register_node("darkage:mud", {
 	}),
 })
 
-minetest.register_node("darkage:ors", {
-	description = "Old Red Sandstone",
-	tiles = {"darkage_ors.png"},
+minetest.register_node("darkage:schist", {
+	description = "Schist",
+	tiles = {"darkage_schist.png"},
 	is_ground_content = true,
-	drop = "darkage:ors_cobble",
-	groups = {crumbly=2,cracky=2},
+	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults()
 })
 
@@ -49,14 +48,6 @@ minetest.register_node("darkage:shale", {
 	tiles = {"darkage_shale.png","darkage_shale.png","darkage_shale_side.png"},
 	is_ground_content = true,
 	groups = {crumbly=2,cracky=2},
-	sounds = default.node_sound_stone_defaults()
-})
-
-minetest.register_node("darkage:schist", {
-	description = "Schist",
-	tiles = {"darkage_schist.png"},
-	is_ground_content = true,
-	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults()
 })
 
@@ -80,33 +71,30 @@ minetest.register_node("darkage:slate", {
 	sounds = default.node_sound_stone_defaults()
 })
 
+minetest.register_node("darkage:ors", {
+	description = "Old Red Sandstone",
+	tiles = {"darkage_ors.png"},
+	is_ground_content = true,
+	drop = "darkage:ors_cobble",
+	groups = {crumbly=2,cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
 minetest.register_node("darkage:gneiss", {
 	description = "Gneiss",
 	tiles = {"darkage_gneiss.png"},
 	is_ground_content = true,
 	groups = {cracky=3},
-	drop = {
-		max_items = 1,
-		items = {
-			{
-				-- player will get cobble with a 1/3 chance
-				items = {"darkage:gneiss_cobble"},
-				rarity = 3,
-			},
-			{
-				items = {"darkage:gneiss"},
-			}
-		}
-	},
+	drop = "darkage:gneiss_cobble",
 	sounds = default.node_sound_stone_defaults()
 })
 
-minetest.register_node("darkage:chalk", {
-	description = "Chalk",
-	tiles = {"darkage_chalk.png"},
+minetest.register_node("darkage:basalt", {
+	description = "Basalt",
+	tiles = {"darkage_basalt.png"},
 	is_ground_content = true,
-	drop = "darkage:chalk_powder 2",
-	groups = {crumbly=2,cracky=2},
+	drop = "darkage:basalt_cobble",
+	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults()
 })
 
@@ -275,8 +263,8 @@ minetest.register_node("darkage:wood_shelves", {
 		local meta = minetest.get_meta(pos)
 		meta:set_string("formspec",
 				"size[8,10]"..
-		"list[context;up;0,0;8,3;]"..
-		"list[context;down;0,3;8,3;]"..
+				"list[context;up;0,0;8,3;]"..
+				"list[context;down;0,3;8,3;]"..
 				"list[current_player;main;0,6;8,4;]")
 		meta:set_string("infotext", "Wooden Shelves")
 		local inv = meta:get_inventory()
@@ -396,9 +384,6 @@ minetest.register_node("darkage:chain", {
 	climbable = true,
 	selection_box = {
 		type = "wallmounted",
-		--wall_top = = <default>
-		--wall_bottom = = <default>
-		--wall_side = = <default>
 	},
 	groups = {snappy=1,cracky=2,oddly_breakable_by_hand=2},
 	legacy_wallmounted = true
