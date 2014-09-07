@@ -11,8 +11,17 @@ This mod originally created by MasterGollum and is now maintained and being impr
 **Installation:** Unzip the file and rename it to "darkage". Then move it to the mod directory.
 
 ## Changelog
-**Development**
+**Version Development**
 
+**Version 1.3**
+
+* Many, many craft recipe changes
+* New lamp texture
+* New mud and mud lump texture
+* Add some more stairs, fix existing stairs
+* Fixes problems with light emmiting nodes
+* Fix caves generating in blocks which are not ground content
+* Remove textures32 folder, code cleanup
 
 **Version 1.2**
 
