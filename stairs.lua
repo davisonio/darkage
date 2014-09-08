@@ -1,4 +1,4 @@
-if minetest.get_modpath("moreblocks") then
+if stairsplus then
 
 	stairsplus:register_all("darkage", "basalt", "darkage:basalt", {
 		description = "Basalt",
@@ -170,7 +170,7 @@ if minetest.get_modpath("moreblocks") then
 		sunlight_propagates = true,
 	})
 
-elseif minetest.get_modpath("stairs") then
+elseif stairs then
 
 	stairs.register_stair_and_slab("basalt", "darkage:basalt",
 		{cracky=3},
