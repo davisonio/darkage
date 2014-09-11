@@ -127,6 +127,42 @@ minetest.register_node("darkage:basalt_cobble", {
 	sounds = default.node_sound_stone_defaults()
 })
 
+-- Brick
+minetest.register_node("darkage:slate_brick", {
+	description = "Slate Brick",
+	tiles = {"darkage_slate_brick.png"},
+	groups = {cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:ors_brick", {
+	description = "Old Red Sandstone Brick",
+	tiles = {"darkage_ors_brick.png"},
+	groups = {crumbly=2,cracky=2},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:gneiss_brick", {
+	description = "Gneiss Brick",
+	tiles = {"darkage_gneiss_brick.png"},
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:basalt_brick", {
+	description = "Basalt Brick",
+	tiles = {"darkage_basalt_brick.png"},
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
+minetest.register_node("darkage:stone_brick", {
+	description = "Stone Brick",
+	tiles = {"darkage_stone_brick.png"},
+	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults()
+})
+
 -- Other Blocks
 minetest.register_node("darkage:straw", {
 	description = "Straw",
@@ -154,13 +190,6 @@ minetest.register_node("darkage:marble_tile", {
 	description = "Marble Tile",
 	tiles = {"darkage_marble_tile.png"},
 	groups = {cracky=2},
-	sounds = default.node_sound_stone_defaults()
-})
-
-minetest.register_node("darkage:stone_brick", {
-	description = "Stone Brick",
-	tiles = {"darkage_stone_brick.png"},
-	groups = {cracky=3},
 	sounds = default.node_sound_stone_defaults()
 })
 

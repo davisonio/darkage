@@ -9,4 +9,8 @@ dofile(minetest.get_modpath("darkage").."/mapgen.lua")
 dofile(minetest.get_modpath("darkage").."/stairs.lua")
 dofile(minetest.get_modpath("darkage").."/aliases.lua")
 
+--
+-- Config
+--
+
 print ("Darkage [darkage] has loaded!")
