@@ -57,71 +57,70 @@ local function generate_stratus(name, wherein, ceilin, ceil, minp, maxp, seed, s
 			for k, v in ipairs(ceilin) do
 				if n == v then
 					x = 1
-				break
-			end
-		end
-		if x == 1 then
-			for y1=y0-1,y_min,-1 do
-				p0.y=y1
-				n = minetest.get_node(p0).name
-				x = 0
-				for k, v in ipairs(wherein) do
-					if n == v then
-						x = 1
 					break
 				end
 			end
 			if x == 1 then
-				y0=y1-deep
-				if y0 < y_min then
-					y0 = y_min
-				end
-				break
-			end
-		end
-		local rx=pr:next(radius/2,radius)+1
-		local rz=pr:next(radius/2,radius)+1
-		local ry=pr:next(radius_y/2,radius_y)+1
-		for x1=0,rx do
-			rz = rz + 3 - pr:next(1,6)
-			if rz < 1 then
-				rz = 1
-			end
-			for z1=pr:next(1,3),rz do
-				local ry0=ry+ pr:next(1,3)
-				for y1=pr:next(1,3),ry0 do
-					local x2 = x0+x1
-					local y2 = y0+y1
-					local z2 = z0+z1
-					local p2 = {x=x2, y=y2, z=z2}
-					n = minetest.get_node(p2).name
+				for y1=y0-1,y_min,-1 do
+					p0.y=y1
+					n = minetest.get_node(p0).name
 					x = 0
-						for k, v in ipairs(wherein) do
-							if n == v then
-								x = 1
+					for k, v in ipairs(wherein) do
+						if n == v then
+							x = 1
 							break
 						end
+					end
+					if x == 1 then
+						y0=y1-deep
+						if y0 < y_min then
+							y0 = y_min
+						end
+						break
+					end
 				end
-				if x == 1 then
-					if ceil == nil then
-						minetest.set_node(p2, {name=name})
-						i = i +1
-					else
-						local p3 = {p2.x,p2.y+1,p2}
-						if minetest.get_node(p3).name == ceil then
-							minetest.set_node(p2, {name=name})
-							i = i +1
+				local rx=pr:next(radius/2,radius)+1
+				local rz=pr:next(radius/2,radius)+1
+				local ry=pr:next(radius_y/2,radius_y)+1
+				for x1=0,rx do
+					rz = rz + 3 - pr:next(1,6)
+					if rz < 1 then
+						rz = 1
+					end
+					for z1=pr:next(1,3),rz do
+						local ry0=ry+ pr:next(1,3)
+						for y1=pr:next(1,3),ry0 do
+							local x2 = x0+x1
+							local y2 = y0+y1
+							local z2 = z0+z1
+							local p2 = {x=x2, y=y2, z=z2}
+							n = minetest.get_node(p2).name
+							x = 0
+								for k, v in ipairs(wherein) do
+									if n == v then
+										x = 1
+										break
+									end
+							end
+							if x == 1 then
+								if ceil == nil then
+									minetest.set_node(p2, {name=name})
+									i = i +1
+								else
+									local p3 = {p2.x,p2.y+1,p2}
+									if minetest.get_node(p3).name == ceil then
+										minetest.set_node(p2, {name=name})
+										i = i +1
+									end
+								end
+							end
 						end
 					end
 				end
+				print("    generated "..dump(i).." blocks in ("..dump(x0)..","..dump(y0)..","..dump(z0)..")")
 			end
 		end
 	end
-	print("    generated "..dump(i).." blocks in ("..dump(x0)..","..dump(y0)..","..dump(z0)..")")
--- end end end end!
-end
-end
-end
 end
 
 local function generate_claylike(name, minp, maxp, seed, chance, minh, maxh, dirt)
