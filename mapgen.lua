@@ -237,55 +237,62 @@ local function generate_ore(data, varea, name, wherein, minp, maxp, seed, chunks
 	end
 end
 
-minetest.register_on_generated(function(minp, maxp, seed)
-local t0 = os.clock()
-
-local vm, emin, emax = minetest.get_mapgen_object("voxelmanip")
-local area = VoxelArea:new({MinEdge = emin, MaxEdge = emax})
-local data = vm:get_data()
-
-print("DARKAGE: Generate stratus");
-generate_claylike(data, area, "darkage:mud", minp, maxp, seed+1, 4, 0, 2, 0)
-generate_claylike(data, area, "darkage:silt", minp, maxp, seed+2, 4, -1, 1, 1)
-generate_stratus(data, area, "darkage:chalk",
+function darkage_mapgen(data, area, minp, maxp, seed) -- public function, to be used by Lua mapgens
+	local t1 = os.clock()
+	generate_claylike(data, area, "darkage:mud", minp, maxp, seed+1, 4, 0, 2, 0)
+	generate_claylike(data, area, "darkage:silt", minp, maxp, seed+2, 4, -1, 1, 1)
+	generate_stratus(data, area, "darkage:chalk",
 				{"default:stone"},
 				{"default:stone","air"}, nil,
 				minp, maxp, seed+3, 4, 25, 8, 0, -20,  50)
-generate_stratus(data, area, "darkage:ors",
+	generate_stratus(data, area, "darkage:ors",
 				{"default:stone"},
 				{"default:stone","air","default:water_source"}, nil,
 				minp, maxp, seed+4, 4, 25, 7, 50, -200,  500)
-generate_stratus(data, area, "darkage:shale",
+	generate_stratus(data, area, "darkage:shale",
 				{"default:stone"},
 				{"default:stone","air"}, nil,
 				minp, maxp, seed+5, 4, 23, 7, 50, -50,  20)
-generate_stratus(data, area, "darkage:slate",
+	generate_stratus(data, area, "darkage:slate",
 				{"default:stone"},
 				{"default:stone","air"}, nil,
 				minp, maxp, seed+6, 6, 23, 5, 50, -500, 0)
-generate_stratus(data, area, "darkage:schist",
+	generate_stratus(data, area, "darkage:schist",
 				{"default:stone"},
 				{"default:stone","air"}, nil,
 				minp, maxp, seed+7, 6, 19, 6, 50, -31000, -10)
-generate_stratus(data, area, "darkage:basalt",
+	generate_stratus(data, area, "darkage:basalt",
 				{"default:stone"},
 				{"default:stone","air"}, nil,
 				minp, maxp, seed+8, 5, 20, 5, 20, -31000, -50)
-generate_stratus(data, area, "darkage:marble",
+	generate_stratus(data, area, "darkage:marble",
 				{"default:stone"},
 				{"default:stone","air"}, nil,
 				minp, maxp, seed+9, 4, 25, 6, 50, -31000,  -75)
-generate_stratus(data, area, "darkage:serpentine",
+	generate_stratus(data, area, "darkage:serpentine",
 				{"default:stone"},
 				{"default:stone","air"}, nil,
 				minp, maxp, seed+10, 4, 28, 8, 50, -31000,  -350)
-generate_stratus(data, area, "darkage:gneiss",
+	generate_stratus(data, area, "darkage:gneiss",
 				{"default:stone"},
 				{"default:stone","air"}, nil,
 				minp, maxp, seed+11, 4, 15, 5, 50, -31000, -250)
+	print("DARKAGE: calculating time : " .. os.clock() - t1)
+end
 
-vm:set_data(data)
-vm:write_to_map()
+minetest.register_on_mapgen_init(function(mgparams)
+	if mgparams.mgname ~= "singlenode" then
+		minetest.register_on_generated(function(minp, maxp, seed)
+			local t0 = os.clock()
+			local vm, emin, emax = minetest.get_mapgen_object("voxelmanip")
+			local area = VoxelArea:new({MinEdge = emin, MaxEdge = emax})
+			local data = vm:get_data()
 
-print("DARKAGE: time taken : " .. os.clock() - t0)
+			darkage_mapgen(data, area, minp, maxp, seed)
+
+			vm:set_data(data)
+			vm:write_to_map()
+			print("DARKAGE: total time taken : " .. os.clock() - t0)
+		end)
+	end
 end)
