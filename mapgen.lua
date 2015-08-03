@@ -238,6 +238,8 @@ local function generate_ore(data, varea, name, wherein, minp, maxp, seed, chunks
 end
 
 minetest.register_on_generated(function(minp, maxp, seed)
+local t0 = os.clock()
+
 local vm, emin, emax = minetest.get_mapgen_object("voxelmanip")
 local area = VoxelArea:new({MinEdge = emin, MaxEdge = emax})
 local data = vm:get_data()
@@ -284,4 +286,6 @@ generate_stratus(data, area, "darkage:gneiss",
 
 vm:set_data(data)
 vm:write_to_map()
+
+print("DARKAGE: time taken : " .. os.clock() - t0)
 end)
