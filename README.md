@@ -1,17 +1,22 @@
-# Darkage mod for Minetest
+# Darkage
+
+![Screenshot](https://raw.githubusercontent.com/CraigyDavi/darkage/master/screenshot.png)
+
 This mod adds some new blocks that allow pre-industrial looking buildings to be made.
 Of course, feel free to use them for any other type of construction.
 
-This mod originally created by MasterGollum and is now maintained and being improved upon by addi and CraigyDavi.
+This mod was originally created by MasterGollum and is now maintained by addi and CraigyDavi.
+
+* **[Minetest Forum Topic](https://forum.minetest.net/viewtopic.php?t=10063)**
+* **[GitHub Repository](https://github.com/CraigyDavi/darkage)**
+
+## Installation
 
 **Depends:** default, stairs?, stairsplus?
 
-**License:** Code and textures, [WTFPL](http://www.wtfpl.net/txt/copying/)
-
-**Installation:** Unzip the file and rename it to "darkage". Then move it to the mod directory.
+[Download](https://github.com/CraigyDavi/darkage/archive/master.zip) & unzip the mod, then rename it to "darkage" and move the the folder into your minetest/mods folder.
 
 ## Changelog
-**Version Development**
 
 **Version 1.3**
 
@@ -19,7 +24,7 @@ This mod originally created by MasterGollum and is now maintained and being impr
 * New lamp texture
 * New mud and mud lump texture
 * Add some more stairs, fix existing stairs
-* Fixes problems with light emmiting nodes
+* Fixes problems with light emitting nodes
 * Fix caves generating in blocks which are not ground content
 * Remove textures32 folder, code cleanup
 
@@ -50,7 +55,7 @@ This mod originally created by MasterGollum and is now maintained and being impr
 * Compatibility with stairsplus added
 * Added new iron_stick item
 * Added craft for iron stick
-* Changed craft reciep of iron_bars to avoid conflicts with iron bars mod
+* Changed craft recipe of iron_bars to avoid conflicts with iron bars mod
 * Changed craft recipe of chain to avoid conflicts with 3d furniture mod
 * Changed craft recipe of darkage:stonebrick to avoid conflicts with moreblocks
 * Disabled marble_tile
@@ -74,3 +79,13 @@ This mod originally created by MasterGollum and is now maintained and being impr
 **Version 0.1**
 
 * 6 Nodes
+
+## License
+
+```
+Copyright (c) 2012-2015 MasterGollum
+
+This work is free. You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To Public License, Version 2,
+as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
+```
