@@ -3,7 +3,7 @@ before_install:
   - rvm install ruby 2.2.3
 
 install:
-  - luarocks install luacheck
+  - sudo luarocks install luacheck
   - gem install awesome_bot
 
 script:
