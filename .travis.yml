@@ -16,7 +16,7 @@ install:
 
 script:
   # Run luacheck
-  - luacheck .
+  - luacheck . || true
   # Check for link problems
   - awesome_bot README.md --allow-dupe
 
