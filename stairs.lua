@@ -1,4 +1,4 @@
-if stairsplus then
+if minetest.get_modpath("stairsplus") then
 
 	stairsplus:register_all("darkage", "basalt", "darkage:basalt", {
 		description = "Basalt",
@@ -170,7 +170,7 @@ if stairsplus then
 		sunlight_propagates = true,
 	})
 
-elseif stairs then
+elseif minetest.get_modpath("stairs") then
 
 	stairs.register_stair_and_slab("basalt", "darkage:basalt",
 		{cracky=3},
@@ -339,5 +339,4 @@ elseif stairs then
 		"Reinforced Wood Slab",
 		default.node_sound_stone_defaults()
 	)
-	
 end
