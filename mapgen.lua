@@ -13,21 +13,19 @@
 	darkage:gneiss
 --]]
 
-local getID = minetest.get_content_id
-
 local function generate_stratus(data, varea, name, wherein, ceilin, ceil, minp, maxp, seed, stratus_chance, radius, radius_y, deep, height_min, height_max)
-	local c_ore = getID(name)
+	local c_ore = minetest.get_content_id(name)
 	local c_wherein = {}
 	local c_ceilin = {}
 	for k, v in ipairs(wherein) do
-		c_wherein[k] = getID(v)
+		c_wherein[k] = minetest.get_content_id(v)
 	end
 	for k, v in ipairs(ceilin) do
-		c_ceilin[k] = getID(v)
+		c_ceilin[k] = minetest.get_content_id(v)
 	end
 	local c_ceil
 	if ceil then
-		c_ceil = getID(ceil)
+		c_ceil = minetest.get_content_id(ceil)
 	end
 	
 	if maxp.y < height_min or minp.y > height_max then
@@ -137,12 +135,12 @@ local function generate_stratus(data, varea, name, wherein, ceilin, ceil, minp, 
 end
 
 local function generate_claylike(data, varea, name, minp, maxp, seed, chance, minh, maxh, dirt)
-	local c_ore = getID(name)
-	local c_sand = getID("default:sand")
-	local c_dirt = getID("default:dirt")
-	local c_lawn = getID("default:dirt_with_grass")
-	local c_water = getID("default:water_source")
-	local c_air = getID("air")
+	local c_ore = minetest.get_content_id(name)
+	local c_sand = minetest.get_content_id("default:sand")
+	local c_dirt = minetest.get_content_id("default:dirt")
+	local c_lawn = minetest.get_content_id("default:dirt_with_grass")
+	local c_water = minetest.get_content_id("default:water_source")
+	local c_air = minetest.get_content_id("air")
 
 	if maxp.y >= maxh+1 and minp.y <= minh-1 then
 	local pr = PseudoRandom(seed)
