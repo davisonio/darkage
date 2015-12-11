@@ -3,11 +3,20 @@ before_install:
   - rvm install ruby 2.2.3
 
 install:
+  - luarocks install luacheck
   - gem install awesome_bot
 
 script:
+  # Run luacheck
+  - luacheck .
   # Check for link problems
   - awesome_bot README.md --allow-dupe
+
+addons:
+  apt:
+    packages:
+      - lua5.2
+      - luarocks
 
 notifications:
   email: false
