@@ -2,7 +2,7 @@ before_install:
   - rvm get stable
   - rvm install ruby 2.2.3
   - wget https://keplerproject.github.io/luarocks/releases/luarocks-2.2.2.tar.gz -O luarocks-2.2.2.tar.gz
-  - tar -xvf luarocks-2.2.2
+  - tar -xvf luarocks-2.2.2.tar.gz
   - cd luarocks-2.2.2
   - ./configure
   - make build
