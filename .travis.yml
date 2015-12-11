@@ -1,9 +1,16 @@
 before_install:
   - rvm get stable
   - rvm install ruby 2.2.3
+  - wget https://keplerproject.github.io/luarocks/releases/luarocks-2.2.2.tar.gz -O luarocks-2.2.2.tar.gz
+  - tar -xvf luarocks-2.2.2
+  - cd luarocks-2.2.2
+  - ./configure
+  - make build
+  - sudo make install
+  - cd ../
 
 install:
-  - sudo luarocks install luacheck
+  - luarocks install luacheck
   - gem install awesome_bot
 
 script:
@@ -16,7 +23,6 @@ addons:
   apt:
     packages:
       - lua5.2
-      - luarocks
 
 notifications:
   email: false
