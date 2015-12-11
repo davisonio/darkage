@@ -5,8 +5,6 @@
 <p align="center">
 <b><a href="#installation">Installation</a></b>
 ·
-<b><a href="#todo">Todo</a></b>
-·
 <b><a href="#authors">Authors</a></b>
 ·
 <b><a href="#credits">Credits</a></b>
@@ -31,15 +29,11 @@ Of course, feel free to use them for any other type of construction.
 
 [Download](https://github.com/davisonio/darkage/archive/master.zip) & unzip the mod, then rename it to "darkage" and move the folder into your minetest/mods folder.
 
-## Todo
-- [ ] add luacheck tests
-- [ ] add contributing.md
-
 ## Authors
 
 **[Craig Davison](http://davison.io)**
 
-[![](https://img.shields.io/github/followers/davisonio.svg?style=social&label=Follow)](https://github.com/davisonio)
+[![GitHub followers](https://img.shields.io/github/followers/davisonio.svg?style=social&label=Follow%20davisonio)](https://github.com/davisonio) [![Twitter followers](https://img.shields.io/twitter/follow/davisonio.svg?style=social)](https://twitter.com/davisonio)
 
 With many thanks to the [contributors](https://github.com/davisonio/darkage/graphs/contributors) :clap:
 
