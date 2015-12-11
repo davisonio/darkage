@@ -10,7 +10,7 @@ before_install:
   - cd ../
 
 install:
-  - luarocks install luacheck
+  - sudo luarocks install luacheck
   - gem install awesome_bot
 
 script:
