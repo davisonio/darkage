@@ -40,11 +40,9 @@ local function generate_stratus(data, varea, name, wherein, ceilin, ceil, minp, 
 	local volume = ((maxp.x-minp.x+1)/area)*((y_max-y_min+1)/area)*((maxp.z-minp.z+1)/area)
 	local pr = PseudoRandom(seed)
 	local blocks = math.floor(stratus_per_volume*volume)
-	print("  <<"..dump(name)..">>");
 	if blocks == 0 then
 		blocks = 1
 	end
-	print("    blocks: "..dump(blocks).." in vol: "..dump(volume).." ("..dump(maxp.x-minp.x+1)..","..dump(y_max-y_min+1)..","..dump(maxp.z-minp.z+1)..")")
 	for i=1,blocks do
 		local x = pr:next(1,stratus_chance)
 		if x == 1 then
@@ -133,7 +131,6 @@ local function generate_stratus(data, varea, name, wherein, ceilin, ceil, minp, 
 						end
 					end
 				end
-				print("    generated "..dump(i).." blocks in ("..dump(x0)..","..dump(y0)..","..dump(z0)..")")
 			end
 		end
 	end
@@ -197,48 +194,7 @@ local function generate_claylike(data, varea, name, minp, maxp, seed, chance, mi
 	end
 end
 
-
-local function generate_ore(data, varea, name, wherein, minp, maxp, seed, chunks_per_volume, chunk_size, ore_per_chunk, height_min, height_max)
-	local c_ore = getID(name)
-	local c_wherein = getID(wherein)
-
-	if maxp.y < height_min or minp.y > height_max then
-		return
-	end
-	local y_min = math.max(minp.y, height_min)
-	local y_max = math.min(maxp.y, height_max)
-	local volume = (maxp.x-minp.x+1)*(y_max-y_min+1)*(maxp.z-minp.z+1)
-	local pr = PseudoRandom(seed)
-	local num_chunks = math.floor(chunks_per_volume * volume)
-	local inverse_chance = math.floor(chunk_size*chunk_size*chunk_size / ore_per_chunk)
-	for i=1,num_chunks do
-		local y0 = pr:next(y_min, y_max-chunk_size+1)
-		if y0 >= height_min and y0 <= height_max then
-			local x0 = pr:next(minp.x, maxp.x-chunk_size+1)
-			local z0 = pr:next(minp.z, maxp.z-chunk_size+1)
-			local p0 = {x=x0, y=y0, z=z0}
-			for x1=0,chunk_size-1 do
-				for y1=0,chunk_size-1 do
-					for z1=0,chunk_size-1 do
-						if pr:next(1,inverse_chance) == 1 then
-							local x2 = x0+x1
-							local y2 = y0+y1
-							local z2 = z0+z1
-							local p2 = {x=x2, y=y2, z=z2}
-							local indexp2 = varea:indexp(p2)
-							if data[indexp2] == c_wherein then
-								data[indexp2] = c_ore
-							end
-						end
-					end
-				end
-			end
-		end
-	end
-end
-
 function darkage_mapgen(data, area, minp, maxp, seed) -- public function, to be used by Lua mapgens
-	local t1 = os.clock()
 	generate_claylike(data, area, "darkage:mud", minp, maxp, seed+1, 4, 0, 2, 0)
 	generate_claylike(data, area, "darkage:silt", minp, maxp, seed+2, 4, -1, 1, 1)
 	generate_stratus(data, area, "darkage:chalk",
@@ -277,13 +233,11 @@ function darkage_mapgen(data, area, minp, maxp, seed) -- public function, to be 
 				{"default:stone"},
 				{"default:stone","air"}, nil,
 				minp, maxp, seed+11, 4, 15, 5, 50, -31000, -250)
-	print("DARKAGE: calculating time : " .. os.clock() - t1)
 end
 
 minetest.register_on_mapgen_init(function(mgparams)
 	if mgparams.mgname ~= "singlenode" then
 		minetest.register_on_generated(function(minp, maxp, seed)
-			local t0 = os.clock()
 			local vm, emin, emax = minetest.get_mapgen_object("voxelmanip")
 			local area = VoxelArea:new({MinEdge = emin, MaxEdge = emax})
 			local data = vm:get_data()
@@ -292,7 +246,6 @@ minetest.register_on_mapgen_init(function(mgparams)
 
 			vm:set_data(data)
 			vm:write_to_map()
-			print("DARKAGE: total time taken : " .. os.clock() - t0)
 		end)
 	end
 end)
