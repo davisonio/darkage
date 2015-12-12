@@ -7,7 +7,7 @@ before_install:
   - ./configure
   - make build
   - sudo make install
-  - cd ../colouredstonebricks
+  - cd ../darkage
 install:
   - sudo luarocks install luacheck
 
