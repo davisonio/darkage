@@ -8,6 +8,7 @@ before_install:
   - make build
   - sudo make install
   - cd ../darkage
+
 install:
   - sudo luarocks install luacheck
 
