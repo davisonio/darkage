@@ -1,4 +1,4 @@
-# [Darkage](https://davison.io/darkage/) :video_game: [![](https://img.shields.io/travis/davisonio/darkage.svg?style=flat-square)](https://travis-ci.org/davisonio/darkage)
+# [Darkage](https://davison.io/darkage/) :video_game: [![](https://img.shields.io/travis/davisonio/darkage.svg?style=flat-square)](https://travis-ci.org/davisonio/darkage) [![](https://img.shields.io/gitter/room/davisonio/bacon.svg)](https://gitter.im/davisonio/bacon)
 
 > Darkage mod for [Minetest](http://www.minetest.net)
 
@@ -10,6 +10,8 @@
 <b><a href="#license--credits">License & Credits</a></b>
 </p>
 
+This is an improved version of the outdated but legendary [Darkage](https://forum.minetest.net/viewtopic.php?f=11&t=3213) mod.
+
 This mod adds some new blocks that allow pre-industrial looking buildings to be made.
 
 Of course, feel free to use them for any other type of construction.
@@ -20,9 +22,15 @@ Of course, feel free to use them for any other type of construction.
 
 ## Install
 
-*Dependencies: default*
+###### Requirements
 
-*Supports: stairs, stairsplus*
+- [Minetest](http://www.minetest.net) >= 0.4.10
+- default
+
+###### Supports
+
+- stairs
+- stairsplus
 
 [Download](https://github.com/davisonio/darkage/archive/master.zip) & unzip the mod, rename it to "darkage" and move it into your `minetest/mods` folder.
 
