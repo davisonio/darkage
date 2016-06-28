@@ -1,5 +1,7 @@
 # [Darkage](https://davison.io/darkage/) :video_game: [![](https://img.shields.io/travis/davisonio/darkage.svg?style=flat-square)](https://travis-ci.org/davisonio/darkage)
 
+[![Join the chat at https://gitter.im/davisonio/darkage](https://badges.gitter.im/davisonio/darkage.svg)](https://gitter.im/davisonio/darkage?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > Darkage mod for [Minetest](http://www.minetest.net)
 
 <p align="center">
