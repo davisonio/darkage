@@ -17,6 +17,7 @@ This mod adds some new blocks that allow pre-industrial looking buildings to be 
 Of course, feel free to use them for any other type of construction.
 
 - [Minetest Forum Topic](https://forum.minetest.net/viewtopic.php?id=10063)
+- [Freeminer Forum Topic](http://forum.freeminer.org/threads/darkage-improved-darkage.176/)
 
 ![](https://davison.io/assets/img/minetest-darkage-screenshot.png)
 
