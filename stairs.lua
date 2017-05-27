@@ -96,7 +96,6 @@ stairsplus:register_all("darkage", "ors_cobble", "darkage:ors_cobble", {
 		sunlight_propagates = true,
 	})
 
-
 	stairsplus:register_all("darkage", "gneiss_cobble", "darkage:gneiss_cobble", {
 		description = "Gneiss Cobble",
 		tiles = {"darkage_gneiss_cobble.png"},
